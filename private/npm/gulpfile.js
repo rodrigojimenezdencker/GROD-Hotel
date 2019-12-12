@@ -24,4 +24,15 @@ function css(done)
 	done();
 }
 
-exports.default = gulp.parallel(css);
+function img(done)
+{
+	gulp
+		.src([
+			'../shared/img*'
+		])
+		.pipe(gulp.dest('../../public/img'))
+	;
+
+	done();
+}
+exports.default = gulp.parallel(css, img);
