@@ -1,12 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" class="page-contact">
+<html lang="en" class="page-thanks-for-contacting-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact | GROD Hotel</title>
+    <link rel="stylesheet" href="../private/shared/css/layout.css">
+    <link rel="stylesheet" href="../private/shared/css/style_guide.css">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <nav id="main_nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="index.html"><img id="main_logo" src="img/logo.png" alt="GROD Hotel"></a>
+                </div>
+            </div>
+            <!-- Hamburger menu on mobile version -->
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <!-- Lines of hamburger icon -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main_layout">
+        <div>
+            <h2>Contact with us!</h2>
+            <p><strong>Direction:</strong> xxxxx, Example (Barcelona)</p>
+            <p><strong>Phone Number:</strong> 999 99 99 99</p>
+            <p><strong>Email:</strong> contact@grod.com</p>
+            <p><strong>ZIP Code:</strong> 08xxx</p>
+        </div>
+        <div>
+            <h2>Send an Email!</h2>
+            <form action="thanks-for-contacting-us.html" method="POST">
+                <fieldset>
+                    <label for="username">Name</label>
+                    <input id="username" type="text" name="first" placeholder="Your Name" required>
+                    <svg class="form_icon">
+                        <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="username">Surnames</label>
+                    <input id="username" type="text" name="first" placeholder="Your Surname" required>
+                    <svg class="form_icon">
+                        <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Your Email" required>
+                    <svg class="form_icon">
+                        <use xlink:href="./svg/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="textarea">Message</label>
+                    <textarea id="textarea" placeholder="Your Message..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <button class="send_button">Send</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_container">
+            <div>
+                <p>
+                    <a href="https://validator.w3.org">
+                        <img src="./img/valid-html5.png" alt="Valid HTML5!" />
+                    </a>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img src="./img/valid-css.gif" alt="Valid CSS!" />
+                    </a>
+                </p>
+                <p>© 2019 GROD Hotel</p>
+            </div>
+            <div class="footer_links">
+                <h3>Useful Links</h3>
+                <p><a href="cookie-usage.html">Cookie Usage</a></p>
+                <p><a href="personal-data-usage.html">Personal Data Usage</a></p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <a href="#"><svg class="footer_icons">
+                        <use xlink:href="svg/symbol-defs.svg#icon-facebook"></use>
+                    </svg></a>
+                <a href="#"><svg class="footer_icons">
+                        <use xlink:href="svg/symbol-defs.svg#icon-twitter"></use>
+                    </svg></a>
+                <a href="#"><svg class="footer_icons">
+                        <use xlink:href="svg/symbol-defs.svg#icon-instagram"></use>
+                    </svg></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
