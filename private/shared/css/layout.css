@@ -236,23 +236,20 @@ footer a:hover {
     cursor: pointer;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70px;
     height: 130px;
     padding: 13px;
+    font-size: 3em;
+    color: white;
   }
+
   #main_nav > .nav-btn > label:hover,
   #main_nav #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(0, 0, 0, 0.3);
   }
-  #main_nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
+
   #main_nav > .nav-links {
     position: absolute;
     display: block;
