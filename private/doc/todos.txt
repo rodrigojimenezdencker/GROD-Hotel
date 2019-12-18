@@ -3,3 +3,15 @@ bookininprocess - GUILLEM
 home - RODRIGO
 hotel - RODRIGO
 ROOM - GUILLEM/RODRI
+
+Queridos Reyes Magos,
+
+Este año me he portado muy bien y creo que me merezco un regalo bien "chachi".
+
+Me gustaria que el form que se encuentra en booking fuera modificado para que nos de un 10 a mi y a mi compañero.
+
+Fecha entrada y Fecha salida, num de adultos y menores y nombre y apellidos juntos en una misma linea.
+
+Muchas gracias!
+
+Guillem Ramoneda.
