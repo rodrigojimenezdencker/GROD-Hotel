@@ -89,20 +89,22 @@
         <div>
             <h2>Booking</h2>
             <form action="booking-in-process.html" method="POST">
-                <fieldset>
-                    <label for="date">Entry date</label>
-                    <input type="date" id="date" />
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="date">Leaving date</label>
-                    <input type="date" id="date" />
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                    </svg>
-                </fieldset>
+                <div style="display: flex; justify-content: space-between;">
+                    <fieldset>
+                        <label for="date">Entry date</label>
+                        <input type="date" id="date" />
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                        </svg>
+                    </fieldset>
+                    <fieldset>
+                        <label for="date">Leaving date</label>
+                        <input type="date" id="date" />
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                        </svg>
+                    </fieldset>
+                </div>
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
                     <input id="numberAdults" type="number" name="numberAdults" value="2" required>
