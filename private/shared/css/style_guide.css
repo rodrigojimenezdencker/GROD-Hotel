@@ -67,6 +67,12 @@ figure img {
   text-align: center;
 }
 
+.custom_table caption {
+  font-size: 2em;
+  text-align: left;
+  color: #80658b;
+}
+
 .custom_table th {
   background-color: #010116;
   color: #f8f8f8;
