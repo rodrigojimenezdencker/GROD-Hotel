@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="page-booking">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,6 @@
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="../private/shared/css/layout.css">
     <link rel="stylesheet" href="../private/shared/css/style_guide.css">
-
 </head>
 
 <body>
@@ -89,7 +89,8 @@
         <div>
             <h2>Booking</h2>
             <form action="booking-in-process.html" method="POST">
-                <div style="display: flex; justify-content: space-between;">
+                <!-- TODO: Cambiar iconos -->
+                <div class="input_group_container">
                     <fieldset>
                         <label for="date">Entry date</label>
                         <input type="date" id="date" />
@@ -105,42 +106,48 @@
                         </svg>
                     </fieldset>
                 </div>
-                <fieldset>
-                    <label for="numberAdults">Number of adults</label>
-                    <input id="numberAdults" type="number" name="numberAdults" value="2" required>
-                </fieldset>
-                <fieldset>
-                    <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" name="numberMinors" value="1" required>
-                </fieldset>
-                <fieldset>
-                    <label for="name">Your name</label>
-                    <input id="name" type="text" maxlength="20" name="first" required>
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="surname">Your surname</label>
-                    <input id="surname" type="text" maxlength="45" name="first" required>
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="dni">DNI</label>
-                    <input id="dni" type="text" maxlength="9" name="first" required>
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="email">Your Email</label>
-                    <input id="email" type="email" maxlength="50" name="email" required>
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-envelope"></use>
-                    </svg>
-                </fieldset>
+                <div class="input_group_container">
+                    <fieldset>
+                        <label for="numberAdults">Number of adults</label>
+                        <input id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="numberMinors">Number of minors</label>
+                        <input id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    </fieldset>
+                </div>
+                <div class="input_group_container">
+                    <fieldset>
+                        <label for="name">Your name</label>
+                        <input id="name" type="text" maxlength="20" name="first" required>
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
+                        </svg>
+                    </fieldset>
+                    <fieldset>
+                        <label for="surname">Your surname</label>
+                        <input id="surname" type="text" maxlength="45" name="first" required>
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
+                        </svg>
+                    </fieldset>
+                </div>
+                <div class="input_group_container">
+                    <fieldset>
+                        <label for="dni">DNI</label>
+                        <input id="dni" type="text" maxlength="9" name="first" required>
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
+                        </svg>
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" maxlength="50" name="email" required>
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-envelope"></use>
+                        </svg>
+                    </fieldset>
+                </div>
                 <fieldset>
                     <label for="comments">Comments</label>
                     <textarea id="comments" maxlength="500"></textarea>
