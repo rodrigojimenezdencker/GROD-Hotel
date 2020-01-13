@@ -295,7 +295,7 @@ textarea:focus {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-form .control_input_checkbox_radio {
+.control_input_checkbox_radio {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -304,13 +304,13 @@ form .control_input_checkbox_radio {
   font-size: 18px;
 }
 
-form .control_input_checkbox_radio input {
+.control_input_checkbox_radio input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-form .input_checkbox_radio_indicator {
+.input_checkbox_radio_indicator {
   position: absolute;
   top: 2px;
   left: 0;
@@ -319,52 +319,47 @@ form .input_checkbox_radio_indicator {
   background: #e6e6e6;
 }
 
-form .control-radio .input_checkbox_radio_indicator {
+.control-radio .input_checkbox_radio_indicator {
   border-radius: 50%;
 }
 
-form
   .control_input_checkbox_radio:hover
   input
   ~ .input_checkbox_radio_indicator,
-form
   .control_input_checkbox_radio
   input:focus
   ~ .input_checkbox_radio_indicator {
   background: #ccc;
 }
 
-form
   .control_input_checkbox_radio
   input:checked
   ~ .input_checkbox_radio_indicator {
   background: #fad860;
 }
 
-form
   .control_input_checkbox_radio:hover
   input:not([disabled]):checked
   ~ .input_checkbox_radio_indicator,
-form
   .control_input_checkbox_radio
   input:checked:focus
   ~ .input_checkbox_radio_indicator {
   background: #fad860;
 }
 
-form .input_checkbox_radio_indicator:after {
+.input_checkbox_radio_indicator:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-form .control_input_checkbox_radio
+.control_input_checkbox_radio
   input:checked
   ~ .input_checkbox_radio_indicator:after {
   display: block;
 }
 
-form .control-checkbox .input_checkbox_radio_indicator:after {
+.control-checkbox .input_checkbox_radio_indicator:after {
   left: 8px;
   top: 4px;
   width: 3px;
@@ -374,7 +369,7 @@ form .control-checkbox .input_checkbox_radio_indicator:after {
   transform: rotate(45deg);
 }
 
-form .control-radio .input_checkbox_radio_indicator:after {
+.control-radio .input_checkbox_radio_indicator:after {
   left: 7px;
   top: 7px;
   height: 6px;
