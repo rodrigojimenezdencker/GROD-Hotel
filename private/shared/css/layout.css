@@ -222,6 +222,7 @@ footer a:hover {
     position: absolute;
     right: 0px;
     top: 0px;
+    z-index: 1;
   }
 
   #mobile_nav_button label {
