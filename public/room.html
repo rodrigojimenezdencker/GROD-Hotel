@@ -126,28 +126,32 @@
         <div>
             <h2>Reserve this room</h2>
             <form action="booking.html" method="POST">
-                <fieldset>
-                    <label for="entry_date">Entry date</label>
-                    <input type="date" id="entry_date" required />
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="leaving_date">Leaving date</label>
-                    <input type="date" id="leaving_date" required />
-                    <svg class="form_icon">
-                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                    </svg>
-                </fieldset>
-                <fieldset>
-                    <label for="numberAdults">Number of adults</label>
-                    <input id="numberAdults" type="number" name="numberAdults" value="2" required>
-                </fieldset>
-                <fieldset>
-                    <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" name="numberMinors" value="0" required>
-                </fieldset>
+                <div class="input_group_container">
+                    <fieldset>
+                        <label for="entry_date">Entry date</label>
+                        <input type="date" id="entry_date" required />
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                        </svg>
+                    </fieldset>
+                    <fieldset>
+                        <label for="leaving_date">Leaving date</label>
+                        <input type="date" id="leaving_date" required />
+                        <svg class="form_icon">
+                            <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                        </svg>
+                    </fieldset>
+                </div>
+                <div class="input_group_container">
+                    <fieldset>
+                        <label for="numberAdults">Number of adults</label>
+                        <input id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="numberMinors">Number of minors</label>
+                        <input id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    </fieldset>
+                </div>
                 <fieldset>
                     <button class="send_button">See availability</button>
                 </fieldset>
