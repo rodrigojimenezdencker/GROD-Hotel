@@ -1,27 +1,16 @@
-@charset "UTF-8";
-
-#main_layout > div {
-  background-color: #f8f8f8;
-  box-sizing: border-box;
-  margin: 10px 0;
-  border-radius: 12px;
-  box-shadow: 1px 3px 3px 1px #fad860;
-  width: 100%;
-}
-
-#main_layout > div.confirmation_message_container {
-  flex-grow: 1;
+.confirmation_message_container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.unordered_list {
+ul {
   padding: 0;
 }
 
-.unordered_list li {
+ul li {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -90,6 +79,7 @@ figure img {
   text-align: center;
 }
 
+/* TODO: Intentar eliminar esta clase. */
 .text_tab {
   padding-left: 3em;
 }
@@ -433,6 +423,7 @@ button.send_button:active {
     text-align: left;
     float: left; /* label to left */
     font-weight: 700;
+    border-radius: 4px;
   }
 
   form {
