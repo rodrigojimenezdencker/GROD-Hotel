@@ -173,7 +173,11 @@ footer {
   padding: 20px;
 }
 
-.footer_icons {
+#social_icon_list li {
+  display: inline;
+}
+
+.footer_icon {
   border: 1px solid #fad860;
   border-radius: 0.7em;
   padding: 0.9em;
@@ -183,7 +187,7 @@ footer {
   fill: #fad860;
 }
 
-.footer_icons:hover {
+.footer_icon:hover {
   border: 1px solid #bb981a;
 }
 
