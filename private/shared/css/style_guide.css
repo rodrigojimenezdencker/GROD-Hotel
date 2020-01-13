@@ -40,7 +40,8 @@ a:visited {
 }
 
 h1,
-h2 {
+h2,
+.custom_table caption {
   color: #80658b;
 }
 
@@ -57,9 +58,8 @@ figure img {
 }
 
 .custom_table caption {
-  font-size: 2em;
+  font-size: 2rem;
   text-align: left;
-  color: #80658b;
 }
 
 .custom_table th {
