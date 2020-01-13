@@ -127,15 +127,15 @@
             <h2>Reserve this room</h2>
             <form action="booking.html" method="POST">
                 <fieldset>
-                    <label for="date">Entry date</label>
-                    <input type="date" id="date" required />
+                    <label for="entry_date">Entry date</label>
+                    <input type="date" id="entry_date" required />
                     <svg class="form_icon">
                         <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
-                    <label for="date">Leaving date</label>
-                    <input type="date" id="date" required />
+                    <label for="leaving_date">Leaving date</label>
+                    <input type="date" id="leaving_date" required />
                     <svg class="form_icon">
                         <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
@@ -146,7 +146,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" name="numberMinors" value="1" required>
+                    <input id="numberMinors" type="number" name="numberMinors" value="0" required>
                 </fieldset>
                 <fieldset>
                     <button class="send_button">See availability</button>
