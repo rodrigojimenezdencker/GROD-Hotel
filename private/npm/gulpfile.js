@@ -69,9 +69,9 @@ function svg(done) {
 function video(done) {
 	gulp
 		.src([
-			'../shared/svg**'
+			'../shared/video**'
 		])
-		.pipe(gulp.dest('../../public/svg'))
+		.pipe(gulp.dest('../../public/video'))
 		;
 
 	done();
