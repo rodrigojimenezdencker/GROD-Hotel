@@ -17,19 +17,16 @@
     <link rel="stylesheet" href="../private/page/contact/css/style.css" />
     <link rel="stylesheet" href="../private/page/cookieUsage/css/style.css" />
     <link rel="stylesheet" href="../private/page/hotel/css/style.css" />
-    <link rel="stylesheet" href="../private/page/index/css/style.css" />
     <link rel="stylesheet" href="../private/page/personalDataUsage/css/style.css" />
     <link rel="stylesheet" href="../private/page/search/css/style.css" />
     <link rel="stylesheet" href="../private/page/thanksForContactingUs/css/style.css" />
+    <link rel="stylesheet" href="../private/page/index/css/style.css" />
 </head>
 
 <body>
     <header>
         <nav id="main_nav">
             <input type="checkbox" id="nav_check">
-            <div id="logo_container">
-                <a href="index.html"><img id="main_logo" src="img/logo.png" alt="GROD Hotel"></a>
-            </div>
             <!-- Hamburger menu on mobile version -->
             <div id="mobile_nav_button">
                 <label aria-label="Toggle main menu" for="nav_check">
@@ -37,13 +34,18 @@
                     &Congruent;
                 </label>
             </div>
-            <div id="nav_links">
-                <a href="index.html">Home</a>
-                <a href="search.html">Search</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <ul id="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+        <img id="img_logo" src="img/logo.png" alt="">
+
+        <video width="100%" autoplay loop>
+            <source src="video/hotel.mp4" type="video/mp4">
+        </video>
     </header>
 
     <main id="main_layout">
