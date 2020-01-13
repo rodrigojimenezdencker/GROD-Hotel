@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="page-room">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,13 @@
                 <a href="index.html"><img id="main_logo" src="img/logo.png" alt="GROD Hotel"></a>
             </div>
             <!-- Hamburger menu on mobile version -->
-            <div class="mobile_nav_button">
-               <label aria-label="Toggle main menu" for="nav_check">
+            <div id="mobile_nav_button">
+                <label aria-label="Toggle main menu" for="nav_check">
                     <!-- Lines of hamburger icon -->
                     &Congruent;
                 </label>
             </div>
-            <div class="nav_links">
+            <div id="nav_links">
                 <a href="index.html">Home</a>
                 <a href="search.html">Search</a>
                 <a href="about.html">About</a>
@@ -37,7 +38,9 @@
         <div>
             <h2>Room</h2>
             <blockquote>
-                <p>This room from <a href="hotel.html">GROD Hotel</a> is especially bright and very spacious. From the bed you can enjoy a large arched window with original mouldings, and through it some fantastic views of the city. Decorated with modern furniture that will cautivate the costumers of this room.</p>
+                <p>This room from <a href="hotel.html">GROD Hotel</a> is especially bright and very spacious. From the
+                    bed you can enjoy a large arched window with original mouldings, and through it some fantastic views
+                    of the city. Decorated with modern furniture that will cautivate the costumers of this room.</p>
             </blockquote>
             <figure>
                 <picture>
@@ -53,7 +56,9 @@
             <table class="custom_table">
                 <thead>
                     <tr>
-                        <th scope="col" colspan="2"><h3>It contains...</h3></th>
+                        <th scope="col" colspan="2">
+                            <h3>It contains...</h3>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -98,7 +103,9 @@
                         <td>FREE</td>
                     </tr>
                     <tr>
-                        <th scope="col"><h3>TOTAL</h3></th>
+                        <th scope="col">
+                            <h3>TOTAL</h3>
+                        </th>
                         <td>420€</td>
                     </tr>
                 </tbody>
@@ -107,31 +114,31 @@
         <div>
             <h2>Reserve this room</h2>
             <form action="booking.html" method="POST">
-            <fieldset>
-                <label for="date">Entry date</label>
-                <input type="date" id="date" required/>
-                <svg class="form_icon">
-                    <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                </svg>
-            </fieldset>
-            <fieldset>
-                <label for="date">Leaving date</label>
-                <input type="date" id="date" required/>
-                <svg class="form_icon">
-                    <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
-                </svg>
-            </fieldset>
-            <fieldset>
-                <label for="numberAdults">Number of adults</label>
-                <input id="numberAdults" type="number" name="numberAdults" value="2" required>
-            </fieldset>
-            <fieldset>
-                <label for="numberMinors">Number of minors</label>
-                <input id="numberMinors" type="number" name="numberMinors" value="1" required>
-            </fieldset>
-            <fieldset>
-                <button class="send_button">See availability</button>
-            </fieldset>
+                <fieldset>
+                    <label for="date">Entry date</label>
+                    <input type="date" id="date" required />
+                    <svg class="form_icon">
+                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="date">Leaving date</label>
+                    <input type="date" id="date" required />
+                    <svg class="form_icon">
+                        <use xlink:href="./svg/symbol-defs.svg#icon-calendar"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="numberAdults">Number of adults</label>
+                    <input id="numberAdults" type="number" name="numberAdults" value="2" required>
+                </fieldset>
+                <fieldset>
+                    <label for="numberMinors">Number of minors</label>
+                    <input id="numberMinors" type="number" name="numberMinors" value="1" required>
+                </fieldset>
+                <fieldset>
+                    <button class="send_button">See availability</button>
+                </fieldset>
         </div>
     </main>
 

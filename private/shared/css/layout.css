@@ -10,11 +10,19 @@
   src: url("../fonts/JuliusSansOne-Regular.ttf");
 }
 
-.nav_links a, h1, h2, h3, h4, h5, h6 {
+#nav_links a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer {
   font-family: "Julius Sans One", sans-serif;
 }
 
-body, footer {
+body,
+footer {
   /* background pattern. Source:
   https://freefrontend.com/css-background-patterns/
   https://codepen.io/foxeisen/pen/KgwYJy */
@@ -88,21 +96,19 @@ header nav {
   text-align: center;
 }
 
-#main_nav > .mobile_nav_button {
+#mobile_nav_button {
   display: none;
 }
 
-#main_nav > .nav_links {
+#nav_links {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   margin: auto;
   height: 100%;
   font-size: 18px;
 }
 
-#main_nav > .nav_links > a {
+#nav_links a {
   font-weight: 800;
   display: inline-block;
   padding: 0.6em;
@@ -114,15 +120,15 @@ header nav {
   margin-bottom: 0.5em;
 }
 
-#main_nav > .nav_links > a:hover {
+#nav_links > a:hover {
   color: #bb981a;
 }
 
-#main_nav > #nav_check {
+#nav_check {
   display: none;
 }
 
-.nav_links a::after {
+#nav_links a::after {
   background-color: #bb981a;
   bottom: 0;
   height: 4px;
@@ -133,13 +139,13 @@ header nav {
 }
 
 /* hover line effect on main nav links */
-.nav_links a:hover::after,
-.nav_links a.-active::after {
+#nav_links a:hover::after,
+#nav_links a.-active::after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-.nav_links a::after {
+#nav_links a::after {
   content: "";
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -149,19 +155,26 @@ header nav {
 /* ********** */
 
 #main_layout {
-  flex-grow: 1;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
   padding: 1rem;
   box-sizing: border-box;
   margin: auto;
 }
 
-footer {
+#main_layout > div {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 1px 3px 3px 1px #fad860;
   width: 100%;
+}
+
+footer {
   color: #fad860;
-  font-family: "Julius Sans One", sans-serif;
 }
 
 .footer_container {
@@ -202,17 +215,18 @@ footer a:hover {
     width: 100%;
   }
 
-  img#main_logo {
+  #main_logo {
     width: 130px;
   }
 
-  #main_nav > .mobile_nav_button {
+  #mobile_nav_button {
     display: inline-block;
     position: absolute;
     right: 0px;
     top: 0px;
   }
-  #main_nav > .mobile_nav_button > label {
+
+  #mobile_nav_button label {
     cursor: pointer;
     box-sizing: border-box;
     display: flex;
@@ -225,36 +239,36 @@ footer a:hover {
     color: white;
   }
 
-  #main_nav > .mobile_nav_button > label:hover,
-  #main_nav #nav_check:checked ~ .mobile_nav_button > label {
+  #mobile_nav_button > label:hover,
+  #nav_check:checked ~ #mobile_nav_button > label {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  #main_nav > .nav_links {
+  #nav_links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    display: block;
     width: 100%;
     background-color: #333;
-    height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 130px;
     left: 0px;
   }
 
-  #main_nav > .nav_links > a {
+  #nav_links > a {
     display: block;
     width: 30%;
-    margin: auto;
     font-weight: 900;
   }
 
-  #main_nav > #nav_check:not(:checked) ~ .nav_links {
+  #nav_check:not(:checked) ~ #nav_links {
     height: 0px;
   }
 
-  #main_nav > #nav_check:checked ~ .nav_links {
-    height: calc(100vh - 130px);
+  #nav_check:checked ~ #nav_links {
+    height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -282,6 +296,11 @@ footer a:hover {
 
   img#main_logo {
     width: 150px;
+  }
+
+  #nav_links {
+    justify-content: center;
+    align-items: center;
   }
 
   .footer_container {
