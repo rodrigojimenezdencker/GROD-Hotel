@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="page-index">
-<!-- TODO: Cerrar todos los elementos (solo index) -->
 
 <head>
     <meta charset="UTF-8" />
@@ -27,7 +26,7 @@
 <body>
     <header>
         <nav>
-            <input type="checkbox" id="nav_check">
+            <input type="checkbox" id="nav_check" />
             <!-- Hamburger menu on mobile version -->
             <div id="mobile_nav_button">
                 <label aria-label="Toggle main menu" for="nav_check">
@@ -42,7 +41,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel">
+        <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel" />
 
         <video width="100%" autoplay loop>
             <source src="video/hotel.mp4" type="video/mp4">
@@ -67,23 +66,23 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input required id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    <input required id="numberAdults" type="number" name="numberAdults" value="2" />
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input required id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    <input required id="numberMinors" type="number" name="numberMinors" value="0">
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
                 </fieldset>
             </div>
             <fieldset>
-                <label>City</label>
+                <label for="city">City</label>
                 <div class="select">
-                    <select required>
+                    <select required id="city">
                         <option selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
@@ -171,15 +170,17 @@
             <h2>Comments</h2>
             <ul class="comments">
                 <li>
+                    <!-- TODO: quitar estilos inline -->
                     <img src="img/huan_user.png" alt="User image">
                     <p style="display: inline;"><strong>Huan</strong> 1 month ago</p>
-                    <p>I really loved this website it found the hotel I needed in seconds, I've really enjoyed it!</p>
+                    <p><em>I really loved this website it found the hotel I needed in seconds, I've really enjoyed
+                            it!</em></p>
                 </li>
                 <hr />
                 <li>
                     <img src="img/pedro_sanchez.png" alt="User image">
                     <p style="display: inline;"><strong>Pedro</strong> 3 months ago</p style="display: inline;">
-                    <p>My wife and I really enjoyed our stay in this hotel, we will repeat for sure.</p>
+                    <p><em>My wife and I really enjoyed our stay in this hotel, we will repeat for sure.</em></p>
                 </li>
             </ul>
         </div>
