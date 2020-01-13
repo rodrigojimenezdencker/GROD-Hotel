@@ -46,6 +46,56 @@
         <video width="100%" autoplay loop>
             <source src="video/hotel.mp4" type="video/mp4">
         </video>
+        <form>
+            <div class="input_group_container">
+                <fieldset>
+                    <label for="entry_date">Entry date</label>
+                    <input type="date" id="entry_date" />
+                    <svg class="form_icon" aria-label="Entry Date">
+                        <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="leaving_date">Leaving date</label>
+                    <input type="date" id="leaving_date" />
+                    <svg class="form_icon" aria-label="Leaving Date">
+                        <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
+                    </svg>
+                </fieldset>
+            </div>
+            <div class="input_group_container">
+                <fieldset>
+                    <label for="numberAdults">Number of adults</label>
+                    <input id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    <svg class="form_icon" aria-label="Number of adults">
+                        <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <label for="numberMinors">Number of minors</label>
+                    <input id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    <svg class="form_icon" aria-label="Number of minors">
+                        <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
+                    </svg>
+                </fieldset>
+            </div>
+            <fieldset>
+                <label>Select</label>
+                <div class="select">
+                    <select>
+                        <option selected disabled>Select a city</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="longon">London</option>
+                        <option value="roma">Roma</option>
+                        <option value="qatar">Qatar</option>
+                        <option value="tokio">Tokio</option>
+                    </select>
+                    <div class="select_arrow"></div>
+                </div>
+                <!-- TODO: añadir botón enviar -->
+            </fieldset>
+        </form>
     </header>
 
     <main id="main_layout">

@@ -110,6 +110,7 @@ fieldset {
   width: 100%;
   position: relative;
   border: none;
+  padding: 0;
 }
 
 form label {
@@ -381,6 +382,11 @@ form .control-radio .input_checkbox_radio_indicator:after {
   background: #f8f8f8;
 }
 
+/* Get rid of arrows on input type="date" */
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
 .send_button {
   outline: none;
   cursor: pointer;
@@ -433,6 +439,10 @@ form .control-radio .input_checkbox_radio_indicator:after {
     float: left; /* label to left */
     font-weight: 700;
     border-radius: 4px;
+  }
+
+  .input_group_container {
+    flex-direction: column;
   }
 
   .file {

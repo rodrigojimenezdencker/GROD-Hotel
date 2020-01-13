@@ -8,7 +8,6 @@
   height: 80px;
   width: 100%;
   background-color: #010116;
-  /* border: 1px solid tomato; */
 }
 
 .page-index nav ul {
@@ -36,22 +35,37 @@
 }
 
 .page-index #img_logo {
-  opacity: 0.75;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.page-index form {
+    width: 80%;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%; 
+    transform: translate(-50%, 0);
+    bottom: 30px;
+    background-color: #ffffff65;
+}
+
+.page-index input[type="date"] {
+    padding: 10px;
 }
 
 @media (max-width: 699px) {
   .page-index #img_logo {
     width: 180px;
     top: 18%;
+    opacity: 0.85;
   }
 }
 
 @media (min-width: 700px) {
   .page-index #img_logo {
-    width: 350px;
-    top: 50%;
+    width: 335px;
+    top: 35%;
+    opacity: 0.75;
   }
 }
