@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Sulphur Point";
+  src: url("../fonts/SulphurPoint-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Julius Sans One";
+  src: url("../fonts/JuliusSansOne-Regular.ttf");
+}
+
 .confirmation_message_container {
   display: flex;
   justify-content: center;
@@ -196,18 +206,22 @@ textarea:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 .select select::-ms-expand {
   display: none;
 }
+
 .select select:hover,
 .select select:focus {
   color: #010116;
   background: #fad86080;
 }
+
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
+
 .select_arrow {
   position: absolute;
   top: 16px;
@@ -219,6 +233,7 @@ textarea:focus {
   border-width: 8px 5px 0 5px;
   border-color: #010116 transparent transparent transparent;
 }
+
 .select select:hover ~ .select_arrow,
 .select select:focus ~ .select_arrow {
   border-top-color: #010116;
@@ -240,7 +255,6 @@ textarea:focus {
 }
 
 .file-custom {
-  /* width: 50%; */
   position: absolute;
   top: 0;
   right: 0;
@@ -279,12 +293,6 @@ textarea:focus {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-/* Get rid of arrows on input type="date" */
-input[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-
-/* CHECKBOXES AND RADIO */
 form .control_input_checkbox_radio {
   display: block;
   position: relative;
@@ -348,8 +356,7 @@ form .input_checkbox_radio_indicator:after {
   display: none;
 }
 
-form
-  .control_input_checkbox_radio
+form .control_input_checkbox_radio
   input:checked
   ~ .input_checkbox_radio_indicator:after {
   display: block;
@@ -373,9 +380,8 @@ form .control-radio .input_checkbox_radio_indicator:after {
   border-radius: 50%;
   background: #f8f8f8;
 }
-/* END CHECKBOXES AND RADIO */
 
-button.send_button {
+.send_button {
   outline: none;
   cursor: pointer;
   position: relative;
@@ -390,20 +396,16 @@ button.send_button {
   background: transparent;
 }
 
-button.send_button:hover {
+.send_button:hover {
   transform: translateY(-2px);
   background: #fad860;
 }
 
-button.send_button:active {
+.send_button:active {
   border-style: inset;
 }
 
 @media screen and (max-width: 699px) {
-  main > div {
-    padding: 2px 10px;
-  }
-
   .table_responsive table thead {
     display: none;
   }
@@ -433,24 +435,12 @@ button.send_button:active {
     border-radius: 4px;
   }
 
-  form {
-    width: 100%;
-  }
-
   .file {
     width: 70%;
   }
 }
 
 @media screen and (min-width: 700px) {
-  #main_layout > div {
-    padding: 8px 25px 8px 25px;
-  }
-
-  form {
-    width: 80%;
-  }
-
   .file {
     width: 100%;
   }
