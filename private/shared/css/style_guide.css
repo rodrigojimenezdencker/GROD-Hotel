@@ -155,9 +155,10 @@ input[type="number"] {
 .input_group_container {
   display: flex;
   justify-content: center;
+  margin: 5px
 }
 
-form input:hover {
+input:hover {
   background: #fad86080;
 }
 
@@ -386,6 +387,11 @@ form .control-radio .input_checkbox_radio_indicator:after {
 input[type="date"]::-webkit-inner-spin-button {
   display: none;
 }
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+/* ********** */
 
 .send_button {
   outline: none;

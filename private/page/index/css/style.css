@@ -46,8 +46,13 @@
     position: absolute;
     left: 50%; 
     transform: translate(-50%, 0);
-    bottom: 30px;
+    bottom: 10px;
     background-color: #ffffff65;
+}
+
+.page-index label {
+    font-weight: 900;
+    font-size: 1.2rem;
 }
 
 .page-index input[type="date"] {
@@ -64,8 +69,8 @@
 
 @media (min-width: 700px) {
   .page-index #img_logo {
-    width: 335px;
-    top: 35%;
+    width: 325px;
+    top: 34%;
     opacity: 0.75;
   }
 }

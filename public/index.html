@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="page-index">
-
+<!-- TODO: Cerrar todos los elementos (solo index) -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,18 +46,18 @@
         <video width="100%" autoplay loop>
             <source src="video/hotel.mp4" type="video/mp4">
         </video>
-        <form>
+        <form action="search.html" method="POST">
             <div class="input_group_container">
                 <fieldset>
                     <label for="entry_date">Entry date</label>
-                    <input type="date" id="entry_date" />
+                    <input required type="date" id="entry_date" />
                     <svg class="form_icon" aria-label="Entry Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="leaving_date">Leaving date</label>
-                    <input type="date" id="leaving_date" />
+                    <input required type="date" id="leaving_date" />
                     <svg class="form_icon" aria-label="Leaving Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
@@ -66,23 +66,23 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    <input required id="numberAdults" type="number" name="numberAdults" value="2" required>
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    <input required id="numberMinors" type="number" name="numberMinors" value="0" required>
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
                 </fieldset>
             </div>
             <fieldset>
-                <label>Select</label>
+                <label>City</label>
                 <div class="select">
-                    <select>
+                    <select required>
                         <option selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
@@ -95,6 +95,7 @@
                 </div>
                 <!-- TODO: añadir botón enviar -->
             </fieldset>
+            <button class="send_button">Send</button>
         </form>
     </header>
 
