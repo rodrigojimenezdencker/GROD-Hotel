@@ -81,6 +81,15 @@
   grid-area: 4 / 4 / 7 / 7;
 }
 
+.page-index .user_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_info img {
+  border-radius: 50%;
+}
+
 @media (max-width: 699px) {
   .page-index #img_logo {
     width: 180px;
