@@ -36,7 +36,7 @@ function css(done) {
 function font(done) {
 	gulp
 		.src([
-			'../shared/fonts**'
+			'../shared/fonts/**'
 		])
 		.pipe(gulp.dest('../../public/fonts'))
 		;
@@ -47,7 +47,7 @@ function font(done) {
 function img(done) {
 	gulp
 		.src([
-			'../shared/img**'
+			'../shared/img/**'
 		])
 		.pipe(gulp.dest('../../public/img'))
 		;
@@ -58,7 +58,7 @@ function img(done) {
 function svg(done) {
 	gulp
 		.src([
-			'../shared/svg**'
+			'../shared/svg/**'
 		])
 		.pipe(gulp.dest('../../public/svg'))
 		;
@@ -69,7 +69,7 @@ function svg(done) {
 function video(done) {
 	gulp
 		.src([
-			'../shared/video**'
+			'../shared/video/**'
 		])
 		.pipe(gulp.dest('../../public/video'))
 		;
