@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="page-index">
-<!-- TODO: Cerrar todos los elementos (solo index) -->
 
 <head>
     <meta charset="UTF-8" />
@@ -8,26 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GROD Hotel - A Luxury Hotel</title>
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
-    <link rel="stylesheet" href="../private/shared/css/layout.css" />
-    <link rel="stylesheet" href="../private/shared/css/style_guide.css" />
-    <link rel="stylesheet" href="../private/shared/css/layout.css" />
-    <link rel="stylesheet" href="../private/shared/css/style_guide.css" />
-    <link rel="stylesheet" href="../private/page/about/css/style.css" />
-    <link rel="stylesheet" href="../private/page/booking/css/style.css" />
-    <link rel="stylesheet" href="../private/page/bookingCompleted/css/style.css" />
-    <link rel="stylesheet" href="../private/page/contact/css/style.css" />
-    <link rel="stylesheet" href="../private/page/cookieUsage/css/style.css" />
-    <link rel="stylesheet" href="../private/page/hotel/css/style.css" />
-    <link rel="stylesheet" href="../private/page/personalDataUsage/css/style.css" />
-    <link rel="stylesheet" href="../private/page/search/css/style.css" />
-    <link rel="stylesheet" href="../private/page/thanksForContactingUs/css/style.css" />
-    <link rel="stylesheet" href="../private/page/index/css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <input type="checkbox" id="nav_check">
+            <input type="checkbox" id="nav_check" />
             <!-- Hamburger menu on mobile version -->
             <div id="mobile_nav_button">
                 <label aria-label="Toggle main menu" for="nav_check">
@@ -42,9 +28,9 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel">
+        <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel" />
 
-        <video width="100%" autoplay loop>
+        <video width="100%" autoplay loop muted>
             <source src="video/hotel.mp4" type="video/mp4">
         </video>
         <form action="search.html" method="POST">
@@ -67,23 +53,23 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input required id="numberAdults" type="number" name="numberAdults" value="2" required>
+                    <input required id="numberAdults" type="number" name="numberAdults" value="2" />
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input required id="numberMinors" type="number" name="numberMinors" value="0" required>
+                    <input required id="numberMinors" type="number" name="numberMinors" value="0">
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
                 </fieldset>
             </div>
             <fieldset>
-                <label>City</label>
+                <label for="city">City</label>
                 <div class="select">
-                    <select required>
+                    <select required id="city">
                         <option selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
@@ -94,7 +80,6 @@
                     </select>
                     <div class="select_arrow"></div>
                 </div>
-                <!-- TODO: añadir botón enviar -->
             </fieldset>
             <button class="send_button">Send</button>
         </form>
@@ -103,8 +88,8 @@
     <main id="layout_main">
         <div>
             <h2>Most Liked</h2>
-            <div class="parent">
-                <div class="div1">
+            <div id="most_liked_hotels_container">
+                <div class="hotel1">
                     <figure>
                         <a href="hotel.html">
                             <picture>
@@ -119,7 +104,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="div2">
+                <div class="hotel2">
                     <figure>
                         <a href="hotel.html">
                             <picture>
@@ -134,7 +119,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="div3">
+                <div class="hotel3">
                     <figure>
                         <a href="hotel.html">
                             <picture>
@@ -149,7 +134,7 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="div4">
+                <div class="hotel4">
                     <figure>
                         <a href="hotel.html">
                             <picture>
@@ -169,14 +154,24 @@
 
         <div>
             <h2>Comments</h2>
-            <blockquote>
-                <p><strong>Huan</strong> 1 month ago</p>
-                <p>I really loved this website it found the hotel I needed in seconds, I've really enjoyed it!</p>
-            </blockquote>
-            <blockquote>
-                <p><strong>Pedro</strong> 1 month ago</p>
-                <p>I really loved this website it found the hotel I needed in seconds, I've really enjoyed it!</p>
-            </blockquote>
+            <ul>
+                <li>
+                    <div class="user_info">
+                        <img src="img/huan_user.png" alt="User image" />
+                        <p><strong>Huan</strong> 1 month ago</p>
+                    </div>
+                    <p><em>I really loved this website it found the hotel I needed in seconds, I've really enjoyed
+                            it!</em></p>
+                </li>
+                <hr />
+                <li>
+                    <div class="user_info">
+                        <img src="img/pedro_sanchez.png" alt="User image" />
+                        <p><strong>Pedro</strong> 3 months ago</p>
+                    </div>
+                    <p><em>My wife and I really enjoyed our stay in this hotel, we will repeat for sure.</em></p>
+                </li>
+            </ul>
         </div>
     </main>
 

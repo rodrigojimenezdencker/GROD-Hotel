@@ -5,4 +5,5 @@ License
 GNU GPL v3 or later https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Author
-GROD Hotel s
+Rodrigo Jiménez | Guillem Ramoneda
+GROD Hotel

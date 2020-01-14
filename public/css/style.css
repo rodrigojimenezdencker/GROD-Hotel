@@ -1,20 +1,21 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: "Sulphur Point";
-  src: url("../fonts/SulphurPoint-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Julius Sans One";
-  src: url("../fonts/JuliusSansOne-Regular.ttf");
-}
-
-.nav-links a, h1, h2, h3, h4, h5, h6 {
+#nav_links a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+footer {
   font-family: "Julius Sans One", sans-serif;
 }
 
-body {
+body,
+footer {
+  /* background pattern. Source:
+  https://freefrontend.com/css-background-patterns/
+  https://codepen.io/foxeisen/pen/KgwYJy */
   background-attachment: fixed;
   background: radial-gradient(#fad860 3px, transparent 4px),
     radial-gradient(#fad860 3px, transparent 4px),
@@ -40,6 +41,9 @@ body {
     #010116;
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+body {
   display: flex;
   flex-direction: column;
   font-size: 18px;
@@ -58,11 +62,11 @@ header {
   background-position: center bottom;
 }
 
-img#main_logo {
+#main_logo {
   user-select: none;
   cursor: pointer;
   border-radius: 50%;
-  padding: 5px;
+  margin: 5px;
   box-sizing: border-box;
 }
 
@@ -78,24 +82,23 @@ header nav {
   );
 }
 
-#main_nav > .nav-header > .nav-title {
+#logo_container {
   text-align: center;
 }
-#main_nav > .nav-btn {
+
+#mobile_nav_button {
   display: none;
 }
 
-#main_nav > .nav-links {
+#nav_links {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   margin: auto;
   height: 100%;
   font-size: 18px;
 }
 
-#main_nav > .nav-links > a {
+#nav_links a {
   font-weight: 800;
   display: inline-block;
   padding: 0.6em;
@@ -107,15 +110,15 @@ header nav {
   margin-bottom: 0.5em;
 }
 
-#main_nav > .nav-links > a:hover {
+#nav_links > a:hover {
   color: #bb981a;
 }
 
-#main_nav > #nav-check {
+#nav_check {
   display: none;
 }
 
-.nav-links a::after {
+#nav_links a::after {
   background-color: #bb981a;
   bottom: 0;
   height: 4px;
@@ -125,57 +128,43 @@ header nav {
   width: 100%;
 }
 
-.nav-links a:hover::after,
-.nav-links a.-active::after {
+/* hover line effect on main nav links */
+#nav_links a:hover::after,
+#nav_links a.-active::after {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-.nav-links a::after {
+
+#nav_links a::after {
   content: "";
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: center;
   transform-origin: center;
 }
+/* ********** */
 
-#main_layout {
-  flex-grow: 1;
-  padding: 15px;
-  box-sizing: border-box;
+#layout_main {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 1rem;
+  box-sizing: border-box;
   margin: auto;
 }
 
-footer {
-  background: radial-gradient(#fad860 3px, transparent 4px),
-    radial-gradient(#fad860 3px, transparent 4px),
-    linear-gradient(#010116 4px, transparent 0),
-    linear-gradient(
-      45deg,
-      transparent 74px,
-      transparent 75px,
-      #fad860 75px,
-      #fad860 76px,
-      transparent 77px,
-      transparent 109px
-    ),
-    linear-gradient(
-      -45deg,
-      transparent 75px,
-      transparent 76px,
-      #fad860 76px,
-      #fad860 77px,
-      transparent 78px,
-      transparent 109px
-    ),
-    #010116;
-  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+#layout_main > div {
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  margin: 10px 0;
+  border-radius: 12px;
+  box-shadow: 1px 3px 3px 1px #fad860;
   width: 100%;
+}
+
+footer {
   color: #fad860;
-  font-family: "Julius Sans One", sans-serif;
 }
 
 .footer_container {
@@ -184,7 +173,11 @@ footer {
   padding: 20px;
 }
 
-.footer_icons {
+#social_icon_list li {
+  display: inline;
+}
+
+.footer_icon {
   border: 1px solid #fad860;
   border-radius: 0.7em;
   padding: 0.9em;
@@ -194,7 +187,7 @@ footer {
   fill: #fad860;
 }
 
-.footer_icons:hover {
+.footer_icon:hover {
   border: 1px solid #bb981a;
 }
 
@@ -212,66 +205,69 @@ footer a:hover {
 }
 
 @media (max-width: 699px) {
-  #main_layout {
+  #layout_main {
     width: 100%;
   }
 
-  img#main_logo {
+  #layout_main > div {
+    padding: 2px 10px;
+  }
+
+  #main_logo {
     width: 130px;
   }
 
-  #main_nav > .nav-btn {
+  #mobile_nav_button {
     display: inline-block;
     position: absolute;
     right: 0px;
     top: 0px;
+    z-index: 1;
   }
-  #main_nav > .nav-btn > label {
+
+  #mobile_nav_button label {
     cursor: pointer;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70px;
     height: 130px;
     padding: 13px;
+    font-size: 3em;
+    color: white;
   }
-  #main_nav > .nav-btn > label:hover,
-  #main_nav #nav-check:checked ~ .nav-btn > label {
+
+  #mobile_nav_button > label:hover,
+  #nav_check:checked ~ #mobile_nav_button > label {
     background-color: rgba(0, 0, 0, 0.3);
   }
-  #main_nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  #main_nav > .nav-links {
+
+  #nav_links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    display: block;
     width: 100%;
     background-color: #333;
-    height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 130px;
     left: 0px;
   }
 
-  #main_nav > .nav-links > a {
+  #nav_links > a {
     display: block;
     width: 30%;
-    margin: auto;
     font-weight: 900;
   }
 
-  #main_nav > #nav-check:not(:checked) ~ .nav-links {
+  #nav_check:not(:checked) ~ #nav_links {
     height: 0px;
   }
 
-  #main_nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 130px);
+  #nav_check:checked ~ #nav_links {
+    height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -293,12 +289,21 @@ footer a:hover {
 }
 
 @media screen and (min-width: 700px) {
-  #main_layout {
+  #layout_main {
     width: 80%;
   }
 
-  img#main_logo {
+  #layout_main > div {
+    padding: 8px 25px 8px 25px;
+  }
+
+  #main_logo {
     width: 150px;
+  }
+
+  #nav_links {
+    justify-content: center;
+    align-items: center;
   }
 
   .footer_container {
@@ -306,20 +311,29 @@ footer a:hover {
   }
 }
 
-#main_layout > div {
-  background-color: #f8f8f8;
-  box-sizing: border-box;
-  margin: 10px 0;
-  border-radius: 12px;
-  box-shadow: 1px 3px 3px 1px #fad860;
-  width: 100%;
+@font-face {
+  font-family: "Sulphur Point";
+  src: url("../fonts/SulphurPoint-Regular.ttf");
 }
 
-.unordered_list {
+@font-face {
+  font-family: "Julius Sans One";
+  src: url("../fonts/JuliusSansOne-Regular.ttf");
+}
+
+.confirmation_message_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+ul {
   padding: 0;
 }
 
-.unordered_list li {
+ul li {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -348,7 +362,9 @@ a:visited {
   color: #6d0814;
 }
 
-h1, h2 {
+h1,
+h2,
+.custom_table caption {
   color: #80658b;
 }
 
@@ -360,12 +376,22 @@ figure img {
   width: 100%;
 }
 
+.centered_text {
+  text-align: center;
+}
+
+.custom_table caption {
+  font-size: 2rem;
+  text-align: left;
+}
+
 .custom_table th {
   background-color: #010116;
   color: #f8f8f8;
 }
 
-.custom_table td, .custom_table th {
+.custom_table td,
+.custom_table th {
   padding: 8px;
   border: 1px solid #010116;
 }
@@ -376,7 +402,13 @@ figure img {
   text-align: center;
 }
 
-form, textarea, input[type="date"] {
+.text_tab {
+  padding-left: 3em;
+}
+
+form,
+textarea,
+input[type="date"] {
   font-family: "Sulphur Point", serif;
 }
 
@@ -387,8 +419,10 @@ form {
 }
 
 fieldset {
+  width: 100%;
   position: relative;
   border: none;
+  padding: 0;
 }
 
 form label {
@@ -396,32 +430,47 @@ form label {
   display: block;
 }
 
-form input, textarea, select {
-  font-size: .9em;
+form input,
+textarea,
+select {
+  font-size: 0.9em;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="number"], input[type="date"] {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="date"] {
   outline: none;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
   height: 42px;
   cursor: text;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 0 3rem 0 1.25rem;
   border: none;
-  border-radius: .25em;
+  border-radius: 0.25em;
   color: #010116;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background: #f8f8f8;
   box-shadow: 1px 1px 3px 0 #01011680 inset;
 }
 
-form input:hover {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="number"] {
+  padding: 0 3rem 0 1.25rem;
+}
+
+.input_group_container {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+input:hover {
   background: #fad86080;
 }
 
@@ -430,16 +479,15 @@ form input:hover {
   height: 1em;
   position: absolute;
   right: 2em;
-  top: 50%;
-  z-index: 2;
+  top: 55%;
   fill: #010116;
 }
 
 textarea {
   resize: vertical;
-  padding: 1em 3em 1em 1.25em;
-  width: 100%;
-  height: 155px;
+  padding: 1em 1.25em;
+  width: 97%;
+  height: 150px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   outline: none;
@@ -448,7 +496,6 @@ textarea {
 }
 
 textarea:focus {
-  width: 100%;
   border: 2px solid #fad860;
 }
 
@@ -473,18 +520,22 @@ textarea:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 .select select::-ms-expand {
   display: none;
 }
+
 .select select:hover,
 .select select:focus {
   color: #010116;
   background: #fad86080;
 }
+
 .select select:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
+
 .select_arrow {
   position: absolute;
   top: 16px;
@@ -496,6 +547,7 @@ textarea:focus {
   border-width: 8px 5px 0 5px;
   border-color: #010116 transparent transparent transparent;
 }
+
 .select select:hover ~ .select_arrow,
 .select select:focus ~ .select_arrow {
   border-top-color: #010116;
@@ -517,7 +569,6 @@ textarea:focus {
 }
 
 .file-custom {
-  /* width: 50%; */
   position: absolute;
   top: 0;
   right: 0;
@@ -556,13 +607,7 @@ textarea:focus {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
-/* Get rid of arrows on input type="date" */
-input[type="date"]::-webkit-inner-spin-button {
-  display: none;
-}
-
-/* CHECKBOXES AND RADIO */
-form .control_input_checkbox_radio {
+.control_input_checkbox_radio {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -571,13 +616,13 @@ form .control_input_checkbox_radio {
   font-size: 18px;
 }
 
-form .control_input_checkbox_radio input {
+.control_input_checkbox_radio input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-form .input_checkbox_radio_indicator {
+.input_checkbox_radio_indicator {
   position: absolute;
   top: 2px;
   left: 0;
@@ -586,35 +631,41 @@ form .input_checkbox_radio_indicator {
   background: #e6e6e6;
 }
 
-form .control-radio .input_checkbox_radio_indicator {
+.control-radio .input_checkbox_radio_indicator {
   border-radius: 50%;
 }
 
-form .control_input_checkbox_radio:hover input ~ .input_checkbox_radio_indicator,
-form .control_input_checkbox_radio input:focus ~ .input_checkbox_radio_indicator {
+.control_input_checkbox_radio:hover input ~ .input_checkbox_radio_indicator,
+.control_input_checkbox_radio input:focus ~ .input_checkbox_radio_indicator {
   background: #ccc;
 }
 
-form .control_input_checkbox_radio input:checked ~ .input_checkbox_radio_indicator {
+.control_input_checkbox_radio input:checked ~ .input_checkbox_radio_indicator {
   background: #fad860;
 }
 
-form .control_input_checkbox_radio:hover input:not([disabled]):checked ~ .input_checkbox_radio_indicator,
-form .control_input_checkbox_radio input:checked:focus ~ .input_checkbox_radio_indicator {
+.control_input_checkbox_radio:hover
+  input:not([disabled]):checked
+  ~ .input_checkbox_radio_indicator,
+.control_input_checkbox_radio
+  input:checked:focus
+  ~ .input_checkbox_radio_indicator {
   background: #fad860;
 }
 
-form .input_checkbox_radio_indicator:after {
-  content: '';
+.input_checkbox_radio_indicator:after {
+  content: "";
   position: absolute;
   display: none;
 }
 
-form .control_input_checkbox_radio input:checked ~ .input_checkbox_radio_indicator:after {
+.control_input_checkbox_radio
+  input:checked
+  ~ .input_checkbox_radio_indicator:after {
   display: block;
 }
 
-form .control-checkbox .input_checkbox_radio_indicator:after {
+.control-checkbox .input_checkbox_radio_indicator:after {
   left: 8px;
   top: 4px;
   width: 3px;
@@ -624,7 +675,7 @@ form .control-checkbox .input_checkbox_radio_indicator:after {
   transform: rotate(45deg);
 }
 
-form .control-radio .input_checkbox_radio_indicator:after {
+.control-radio .input_checkbox_radio_indicator:after {
   left: 7px;
   top: 7px;
   height: 6px;
@@ -632,9 +683,18 @@ form .control-radio .input_checkbox_radio_indicator:after {
   border-radius: 50%;
   background: #f8f8f8;
 }
-/* END CHECKBOXES AND RADIO */
 
-button.send_button {
+/* Get rid of arrows on input type="date" */
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* ********** */
+
+.send_button {
   outline: none;
   cursor: pointer;
   position: relative;
@@ -649,20 +709,16 @@ button.send_button {
   background: transparent;
 }
 
-button.send_button:hover {
+.send_button:hover {
   transform: translateY(-2px);
   background: #fad860;
 }
 
-button.send_button:active {
-	border-style: inset;
+.send_button:active {
+  border-style: inset;
 }
 
 @media screen and (max-width: 699px) {
-  main > div {
-    padding: 2px 10px;
-  }
-
   .table_responsive table thead {
     display: none;
   }
@@ -689,10 +745,11 @@ button.send_button:active {
     text-align: left;
     float: left; /* label to left */
     font-weight: 700;
+    border-radius: 4px;
   }
 
-  form {
-    width: 100%;
+  .input_group_container {
+    flex-direction: column;
   }
 
   .file {
@@ -701,15 +758,144 @@ button.send_button:active {
 }
 
 @media screen and (min-width: 700px) {
-  #main_layout > div {
-    padding: 8px 25px 8px 25px;
-  }
-
-  form {
-    width: 80%;
-  }
-
   .file {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+.page-index header {
+  height: 100vh;
+  background-image: none;
+}
+
+.page-index header nav {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: #010116;
+}
+
+.page-index nav ul {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 65%;
+  margin: auto;
+  font-family: "Julius Sans One", sans-serif;
+  z-index: 1;
+}
+
+.page-index nav a {
+  color: #fad860;
+  text-decoration: none;
+}
+
+.page-index video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.page-index #img_logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page-index form {
+  width: 80%;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 10px;
+  background-color: #ffffff65;
+}
+
+.page-index label {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.page-index input[type="date"] {
+  padding: 10px;
+}
+
+#most_liked_hotels_container img {
+  animation: 800ms;
+  transition: 400ms ease;
+}
+
+#most_liked_hotels_container img:hover {
+  transform: scale(1.04);
+}
+
+#most_liked_hotels_container .hotel1 {
+  grid-area: 1 / 1 / 4 / 4;
+}
+#most_liked_hotels_container .hotel2 {
+  grid-area: 1 / 4 / 4 / 7;
+}
+#most_liked_hotels_container .hotel3 {
+  grid-area: 4 / 1 / 7 / 4;
+}
+#most_liked_hotels_container .hotel4 {
+  grid-area: 4 / 4 / 7 / 7;
+}
+
+.page-index .user_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_info img {
+  border-radius: 50%;
+}
+
+@media (max-width: 699px) {
+  .page-index #img_logo {
+    width: 180px;
+    top: 18%;
+    opacity: 0.85;
+  }
+
+  #most_liked_hotels_container {
+    display: block;
+  }
+}
+
+@media (min-width: 700px) {
+  .page-index #img_logo {
+    width: 325px;
+    top: 34%;
+    opacity: 0.75;
+  }
+
+  .page-index #layout_main {
+    width: 100%;
+  }
+
+  #most_liked_hotels_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  #most_liked_hotels_container img {
+    height: 450px;
+  }
+}
+
+
+

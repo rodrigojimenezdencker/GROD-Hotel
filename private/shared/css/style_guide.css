@@ -89,7 +89,6 @@ figure img {
   text-align: center;
 }
 
-/* TODO: Intentar eliminar esta clase. */
 .text_tab {
   padding-left: 3em;
 }
@@ -155,7 +154,7 @@ input[type="number"] {
 .input_group_container {
   display: flex;
   justify-content: center;
-  margin: 5px
+  margin: 5px;
 }
 
 input:hover {
@@ -323,25 +322,19 @@ textarea:focus {
   border-radius: 50%;
 }
 
-  .control_input_checkbox_radio:hover
-  input
-  ~ .input_checkbox_radio_indicator,
-  .control_input_checkbox_radio
-  input:focus
-  ~ .input_checkbox_radio_indicator {
+.control_input_checkbox_radio:hover input ~ .input_checkbox_radio_indicator,
+.control_input_checkbox_radio input:focus ~ .input_checkbox_radio_indicator {
   background: #ccc;
 }
 
-  .control_input_checkbox_radio
-  input:checked
-  ~ .input_checkbox_radio_indicator {
+.control_input_checkbox_radio input:checked ~ .input_checkbox_radio_indicator {
   background: #fad860;
 }
 
-  .control_input_checkbox_radio:hover
+.control_input_checkbox_radio:hover
   input:not([disabled]):checked
   ~ .input_checkbox_radio_indicator,
-  .control_input_checkbox_radio
+.control_input_checkbox_radio
   input:checked:focus
   ~ .input_checkbox_radio_indicator {
   background: #fad860;
@@ -383,8 +376,8 @@ input[type="date"]::-webkit-inner-spin-button {
   display: none;
 }
 
-input[type=number] {
-  -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 /* ********** */
 
