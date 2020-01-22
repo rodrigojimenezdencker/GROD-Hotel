@@ -75,7 +75,7 @@ var window_onDomContentLoaded = function () {
 
     route();
     
-    var backToTopButton = document.getElementById("fixedbutton");
+    var backToTopButton = document.querySelector('[data-widget="scroll_to_top"]');
 
     window.onscroll = function() {scrollFunction()};
 
