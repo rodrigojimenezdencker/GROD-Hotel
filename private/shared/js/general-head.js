@@ -23,7 +23,10 @@ var window_onDomContentLoaded = function () {
     }
 
     setuppers['booking'] = function () {
-        console.log('Booking');
+        console.log('booking');
+        var widget = document.querySelector('[data-widget="booking_form"]');
+        var entryDate = widget.querySelector('[data-hook="entry_date"]');
+        console.log(entryDate);
     }
 
     setuppers['contact'] = function () {
@@ -72,9 +75,8 @@ var window_onDomContentLoaded = function () {
         }
 
     }
-
-    route();
     
+    route();
     var backToTopButton = document.querySelector('[data-widget="scroll_to_top"]');
 
     window.onscroll = function() {scrollFunction()};
