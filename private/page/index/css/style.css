@@ -40,7 +40,7 @@
   transform: translate(-50%, -50%);
 }
 
-.page-index form {
+.page-index header form {
   width: 80%;
   border-radius: 5px;
   position: absolute;

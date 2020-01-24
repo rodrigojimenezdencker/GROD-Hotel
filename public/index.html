@@ -187,9 +187,23 @@
         </div>
     </main>
 
-    <a href="#head"><img class="arrow_up" src="/public/img/flechaBackToTop.png" data-widget="scroll_to_top" alt="Go back to the top of the page"></a>
+    <a href="#head"><img class="arrow_up" src="/public/svg/navigate-up-arrow.svg" data-widget="scroll_to_top"
+            alt="Go back to the top of the page"></a>
 
     <footer>
+        <div class="newsletter_form_container">
+            
+            <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <div class="newsletter_input_container">
+                        <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
+                        <svg class="form_icon" aria-label="Your Email">
+                            <use xlink:href="svg/symbol-defs.svg#icon-mail" />
+                        </svg>
+                        <button class="send_button">Subscribe!</button>
+                    </div>
+            </form>
+        </div>
         <div class="footer_container">
             <div>
                 <p>
@@ -212,23 +226,6 @@
                         <a href="personal-data-usage.html">Personal Data Usage</a>
                     </li>
                 </ul>
-            </div>
-            <div>
-                <h3>Subscribe to our newletter!</h3>
-                <form action="thanks-for-subscribing.html" method="POST">
-                    <div class="input_group_container">
-                        <fieldset>
-                            <label for="email">Your Email</label>
-                            <input id="email" type="email" maxlength="50" name="email" required />
-                            <svg class="form_icon" aria-label="Your Email">
-                                <use xlink:href="svg/symbol-defs.svg#icon-mail" />
-                            </svg>
-                        </fieldset>
-                        <fieldset>
-                            <button class="send_button">Subscribe!</button>
-                        </fieldset>
-                    </div>
-                </form>
             </div>
             <div>
                 <h3>Follow Us</h3>
