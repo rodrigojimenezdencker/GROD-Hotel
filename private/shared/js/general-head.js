@@ -23,14 +23,13 @@ var window_onDomContentLoaded = function () {
     }
 
     setuppers['booking'] = function () {
-        console.log('booking');
-
         var widget = document.querySelector('[data-widget="booking_form"]');
         widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['contact'] = function () {
-        console.log('Contact');
+        var widget = document.querySelector('[data-widget="contact_form"]');
+        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['cookie-usage'] = function () {
@@ -42,7 +41,8 @@ var window_onDomContentLoaded = function () {
     }
 
     setuppers['index'] = function () {
-        console.log('Index');
+        var widget = document.querySelector('[data-widget="index_form"]');
+        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['personal-data-usage'] = function () {
