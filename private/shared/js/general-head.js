@@ -24,12 +24,12 @@ var window_onDomContentLoaded = function () {
 
     setuppers['booking'] = function () {
         var widget = document.querySelector('[data-widget="booking_form"]');
-        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
+        var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['contact'] = function () {
         var widget = document.querySelector('[data-widget="contact_form"]');
-        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
+        var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['cookie-usage'] = function () {
@@ -42,7 +42,10 @@ var window_onDomContentLoaded = function () {
 
     setuppers['index'] = function () {
         var widget = document.querySelector('[data-widget="index_form"]');
-        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
+        var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
+        if(result == 'Ok') {
+            console.log(result);
+        }
     }
 
     setuppers['personal-data-usage'] = function () {
@@ -92,8 +95,10 @@ var window_onDomContentLoaded = function () {
 
     var validateForm = function (widget) {
         var entryDate = widget.querySelector('[data-hook="entry_date"]').value;
+        var leavingDate = widget.querySelector('[data-hook="leaving_date"]').value;
 
         //NUMBER OF ADULTS
+        if(widget.querySelector('[data-hook="numberAdults"]') != null) {
         var numberAdults = parseInt(widget.querySelector('[data-hook="numberAdults"]').value);
         if(typeof numberAdults != 'number' || numberAdults < 0 || numberAdults > 10 || isNaN(numberAdults)) {
             Swal.fire({
@@ -101,10 +106,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect number of adults!'
               });
+              return 'No';
             }
+        }
         //NUMBER OF ADULTS
 
         //NUMBER OF MINORS
+        if(widget.querySelector('[data-hook="numberMinors"]') !=  null) {
         var numberMinors = parseInt(widget.querySelector('[data-hook="numberMinors"]').value);
         if(typeof numberMinors != 'number' || numberMinors < 0 || numberMinors > 10) {
             Swal.fire({
@@ -112,10 +120,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect number of minors!'
               });
+              return 'No';
             }
+        }
         //NUMBER OF MINORS
 
         //NAME
+        if(widget.querySelector('[data-hook="name"]') != null) {
         var name = widget.querySelector('[data-hook="name"]').value;
         if(name.length == 0 || name.length > 30) {
             Swal.fire({
@@ -123,10 +134,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect name!'
               });
+              return 'No';
             }
+        }
         //NAME
 
         //SURNAME
+        if(widget.querySelector('[data-hook="surname"]') != null) {
         var surname = widget.querySelector('[data-hook="surname"]').value;
         if(surname.length == 0 || surname.length > 50) {
             Swal.fire({
@@ -134,10 +148,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect surname!'
               });
+              return 'No';
             }
+        }
         //SURNAME
 
         //COMMENTS
+        if(widget.querySelector('[data-hook="comments"]') != null) {
         var comments = widget.querySelector('[data-hook="comments"]').value;
         if(comments.length > 500) {
             Swal.fire({
@@ -145,10 +162,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect comment!'
               });
+              return 'No';
             }
+        }
         //COMMENTS
 
         //MESSAGE
+        if(widget.querySelector('[data-hook="message"]') != null) {
         var message = widget.querySelector('[data-hook="message"]').value;
         if(message.length == 0 || message.length > 2000) {
             Swal.fire({
@@ -156,10 +176,13 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect message!'
               });
+              return 'No';
             }
+        }
         //MESSAGE
 
         //CITY
+        if(widget.querySelector('[data-hook="city"]') != null){
         var city = widget.querySelector('[data-hook="city"]').value;
         if(city.length == 0 || city.length > 20) {
             Swal.fire({
@@ -167,8 +190,11 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect city!'
               });
+              return 'No';
             }
+        }
         //CITY
+        return 'Ok'; 
     }
 
     backToTopButton.addEventListener("click", backToTop);
