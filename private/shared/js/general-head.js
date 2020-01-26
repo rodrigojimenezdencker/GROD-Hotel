@@ -22,14 +22,14 @@ var window_onDomContentLoaded = function () {
         console.log('Booking in process');
     }
 
-    setuppers['booking'] = function () {
+    setuppers['booking'] = async function () {
         var widget = document.querySelector('[data-widget="booking_form"]');
         var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['contact'] = function () {
         var widget = document.querySelector('[data-widget="contact_form"]');
-        var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
+        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['cookie-usage'] = function () {
@@ -42,10 +42,7 @@ var window_onDomContentLoaded = function () {
 
     setuppers['index'] = function () {
         var widget = document.querySelector('[data-widget="index_form"]');
-        var result = widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
-        if(result == 'Ok') {
-            console.log(result);
-        }
+        widget.addEventListener("submit", function(event) { event.preventDefault(); validateForm(widget); });
     }
 
     setuppers['personal-data-usage'] = function () {
@@ -194,7 +191,7 @@ var window_onDomContentLoaded = function () {
             }
         }
         //CITY
-        return 'Ok'; 
+        widget.submit(); 
     }
 
     backToTopButton.addEventListener("click", backToTop);
