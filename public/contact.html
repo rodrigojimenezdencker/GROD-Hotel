@@ -58,28 +58,28 @@
             <form action="thanks-for-contacting-us.html" method="POST">
                 <fieldset>
                     <label for="username">Name</label>
-                    <input id="username" type="text" name="first" placeholder="Your Name" required />
+                    <input id="username" type="text" data-hook="name" name="first" placeholder="Your Name" />
                     <svg class="form_icon" aria-label="Name">
                         <use xlink:href="./svg/symbol-defs.svg#icon-user"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="username">Surnames</label>
-                    <input id="username" type="text" name="first" placeholder="Your Surname" required />
+                    <input id="username" type="text" data-hook="surname" name="first" placeholder="Your Surname" />
                     <svg class="form_icon" aria-label="Surnames">
                         <use xlink:href="svg/symbol-defs.svg#icon-user"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Your Email" required />
+                    <input id="email" type="email" data-hook="email" name="email" placeholder="Your Email"/>
                     <svg class="form_icon" aria-label="Email">
                         <use xlink:href="svg/symbol-defs.svg#icon-mail"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="textarea">Message</label>
-                    <textarea id="textarea" placeholder="Your Message..."></textarea>
+                    <textarea id="textarea" data-hook="message" placeholder="Your Message..."></textarea>
                 </fieldset>
                 <fieldset>
                     <button class="send_button">Send</button>

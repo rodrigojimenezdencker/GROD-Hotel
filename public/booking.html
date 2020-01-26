@@ -117,7 +117,7 @@
                 <div class="input_group_container">
                     <fieldset>
                         <label for="numberAdults">Number of adults</label>
-                        <input id="numberAdults" type="number" data-hook="numberAdilts" name="numberAdults" value="2" />
+                        <input id="numberAdults" type="number" data-hook="numberAdults" name="numberAdults" value="2" />
                         <svg class="form_icon" aria-label="Number of adults">
                             <use xlink:href="svg/symbol-defs.svg#icon-man" />
                         </svg>
@@ -133,7 +133,7 @@
                 <div class="input_group_container">
                     <fieldset>
                         <label for="name">Your name</label>
-                        <input id="name" type="text" data-hook="name" name="name" required />
+                        <input id="name" type="text" data-hook="name" name="name"  />
                         <svg class="form_icon" aria-label="Your name">
                             <use xlink:href="svg/symbol-defs.svg#icon-user" />
                         </svg>
@@ -167,11 +167,12 @@
                     <textarea id="comments" data-hook="comments"></textarea>
                 </fieldset>
                 <fieldset>
-                    <button class="send_button">Reserve</button>
+                    <button data-hook="send" class="send_button">Reserve</button>
                 </fieldset>
             </form>
         </div>
 
+        <a href="#head"><img class="arrow_up" src="/public/img/flechaBackToTop.png" data-widget="scroll_to_top" alt="Go back to the top of the page"></a>
     </main>
 
     <footer>
@@ -226,6 +227,8 @@
             </div>
         </div>
     </footer>
+    <script src="../private/shared/js/sweetalert2.all.js"></script>
+    <script src="../private/shared/js/moment.min.js"></script>
     <script src="../private/shared/js/general-head.js"></script>
 </body>
 
