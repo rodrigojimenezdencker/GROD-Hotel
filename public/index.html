@@ -30,7 +30,7 @@
         </nav>
         <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel" />
 
-        <video width="100%" autoplay loop muted>
+        <video width="100" autoplay loop muted>
             <source src="video/hotel.mp4" type="video/mp4">
         </video>
         <form action="search.html" data-widget="index_form" method="POST">
@@ -72,7 +72,7 @@
                 <label for="city">City</label>
                 <div class="select">
                     <select data-hook="city" id="city" required>
-                        <option selected disabled>Select a city</option>
+                        <option value="" selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
                         <option value="longon">London</option>
@@ -165,7 +165,6 @@
                     <p><em>I really loved this website it found the hotel I needed in seconds, I've really enjoyed
                             it!</em></p>
                 </li>
-                <hr />
                 <li>
                     <div class="user_info">
                         <img src="img/pedro_sanchez.png" alt="User image" />
