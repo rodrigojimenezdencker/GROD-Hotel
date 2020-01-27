@@ -2,12 +2,6 @@
 
 var window_onDomContentLoaded = function () {
 
-    var backToTop = function () {
-        
-        window.scrollTo({top: 0, behavior: 'smooth'});
-
-    }
-
     var setuppers = [];
 
     setuppers['about'] = function () {
@@ -77,8 +71,6 @@ var window_onDomContentLoaded = function () {
     }
     
     route();
-    
-    var backToTopButton = document.querySelector('[data-widget="scroll_to_top"]');
 
     window.onscroll = function() {scrollFunction()};
 
@@ -90,7 +82,13 @@ var window_onDomContentLoaded = function () {
       }
     }
 
-    var validateForm = function (widget) {
+    function backToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
+
+    var backToTopButton = document.querySelector('[data-widget="scroll_to_top"]');
+
+    backToTopButton.addEventListener("click", backToTop);
+
+    function validateForm (widget) {
         //ENTRY DATE
         if(widget.querySelector('[data-hook="entry_date"]') != null) {
         var entryDate = widget.querySelector('[data-hook="entry_date"]').value;
@@ -102,7 +100,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect entry date!'
               });
-              return 'No';
+              return;
             }
         }
         //ENTRY DATE
@@ -117,7 +115,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect leaving date!'
               });
-              return 'No';
+              return;
             }
         }
         //LEAVING DATE
@@ -131,7 +129,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect number of adults!'
               });
-              return 'No';
+              return;
             }
         }
         //NUMBER OF ADULTS
@@ -145,7 +143,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect number of minors!'
               });
-              return 'No';
+              return;
             }
         }
         //NUMBER OF MINORS
@@ -159,7 +157,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect name!'
               });
-              return 'No';
+              return;
             }
         }
         //NAME
@@ -173,7 +171,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect surname!'
               });
-              return 'No';
+              return;
             }
         }
         //SURNAME
@@ -187,7 +185,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect comment!'
               });
-              return 'No';
+              return;
             }
         }
         //COMMENTS
@@ -201,7 +199,7 @@ var window_onDomContentLoaded = function () {
                 title: "Something is not right...",
                 text: 'Incorrect message!'
               });
-              return 'No';
+              return;
             }
         }
         //MESSAGE
@@ -215,7 +213,7 @@ var window_onDomContentLoaded = function () {
                     title: "Something is not right...",
                     text: 'Incorrect city!'
                 });
-                return 'No';
+                return;
             }
         }
         //CITY
@@ -229,7 +227,7 @@ var window_onDomContentLoaded = function () {
                     title: "Something is not right...",
                     text: 'Incorrect DNI!'
                 });
-                return 'No';
+                return;
             }
         }
         //DNI
@@ -244,7 +242,7 @@ var window_onDomContentLoaded = function () {
                     title: "Something is not right...",
                     text: 'Incorrect Email!'
                 });
-                return 'No';
+                return;
             }
         }
         //EMAIL
@@ -260,20 +258,17 @@ var window_onDomContentLoaded = function () {
         regex = /^\d{8}[a-zA-Z]$/;
        
         if(regex.test (dni) == true) {
-           number = dni.substr(0,dni.length-1);
-           char = dni.substr(dni.length-1,1);
-           number = number % 23;
-           chars='TRWAGMYFPDXBNJZSQVHLCKET';
-           chars=chars.substring(number,number+1);
-          if(chars==char.toUpperCase()) {
-             return false;
-           }
+            number = dni.substr(0,dni.length-1);
+            char = dni.substr(dni.length-1,1);
+            number = number % 23;
+            chars='TRWAGMYFPDXBNJZSQVHLCKET';
+            chars=chars.substring(number,number+1);
+                if(chars==char.toUpperCase()) {
+                    return false;
+                }
         } else {
            return true;
-         }
-      }
-      
-
-    backToTopButton.addEventListener("click", backToTop);
+        }
+    }
 }
 window.addEventListener('DOMContentLoaded', window_onDomContentLoaded);
