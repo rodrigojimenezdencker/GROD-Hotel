@@ -64,8 +64,6 @@ var window_onDomContentLoaded = function () {
 
         if (typeof routing == 'string') {
             setuppers[routing]();
-        } else {
-            console.log('How the f*ck did you get here?!')
         }
 
     }
@@ -135,7 +133,7 @@ var window_onDomContentLoaded = function () {
         //NUMBER OF ADULTS
 
         //NUMBER OF MINORS
-        if(widget.querySelector('[data-hook="numberMinors"]') !=  null) {
+        if(widget.querySelector('[data-hook="numberMinors"]') != null) {
         var numberMinors = parseInt(widget.querySelector('[data-hook="numberMinors"]').value);
         if(typeof numberMinors != 'number' || numberMinors < 0 || numberMinors > 10) {
             Swal.fire({
@@ -269,6 +267,22 @@ var window_onDomContentLoaded = function () {
         } else {
            return true;
         }
+    }
+
+    var cookies = document.querySelector('[data-widget="cookies_warning"]');
+    if(document.cookie == "") {
+        var accept_cookie = cookies.querySelector('[data-hook="accept_cookie"]');
+        var reject_cookie = cookies.querySelector('[data-hook="reject_cookie"]');
+        accept_cookie.addEventListener("click", function() { 
+            document.cookie = 'name=USE_COOKIES;value=1;max-age=300';
+            cookies.style.display = "none";
+        });
+        reject_cookie.addEventListener("click", function() { 
+            document.cookie = 'name=USE_COOKIES;value=0;max-age=300';
+            cookies.style.display = "none";
+         })
+    } else {
+        cookies.style.display = "none";
     }
 }
 window.addEventListener('DOMContentLoaded', window_onDomContentLoaded);
