@@ -68,7 +68,7 @@
                 <thead>
                     <tr>
                         <th scope="col" colspan="2">
-                            <h3>It contains...</h3>
+                            <p>It contains...</p>
                         </th>
                     </tr>
                 </thead>
@@ -115,7 +115,7 @@
                     </tr>
                     <tr>
                         <th scope="col">
-                            <h3>TOTAL</h3>
+                            <p>TOTAL</p>
                         </th>
                         <td>420€</td>
                     </tr>
@@ -124,18 +124,18 @@
         </div>
         <div>
             <h2>Reserve this room</h2>
-            <form action="booking.html" method="POST">
+            <form action="booking.html" data-widget="room_form" method="POST">
                 <div class="input_group_container">
                     <fieldset>
                         <label for="entry_date">Entry date</label>
-                        <input type="date" id="entry_date" required />
+                        <input type="date" data-hook="entry_date" id="entry_date" required />
                         <svg class="form_icon" aria-label="Entry date">
                             <use xlink:href="svg/symbol-defs.svg#icon-calendar" />
                         </svg>
                     </fieldset>
                     <fieldset>
                         <label for="leaving_date">Leaving date</label>
-                        <input type="date" id="leaving_date" required />
+                        <input type="date" data-hook="leaving_date" id="leaving_date" required />
                         <svg class="form_icon" aria-label="Leaving date">
                             <use xlink:href="svg/symbol-defs.svg#icon-calendar" />
                         </svg>
@@ -144,14 +144,14 @@
                 <div class="input_group_container">
                     <fieldset>
                         <label for="numberAdults">Number of adults</label>
-                        <input id="numberAdults" type="number" name="numberAdults" value="2" required />
+                        <input id="numberAdults" data-hook="numberAdults" type="number" name="numberAdults" value="2" required />
                         <svg class="form_icon" aria-label="Number of adults">
                             <use xlink:href="svg/symbol-defs.svg#icon-man" />
                         </svg>
                     </fieldset>
                     <fieldset>
                         <label for="numberMinors">Number of minors</label>
-                        <input id="numberMinors" type="number" name="numberMinors" value="0" required />
+                        <input id="numberMinors" data-hook="numberMinors" type="number" name="numberMinors" value="0" required />
                         <svg class="form_icon" aria-label="Number of minors">
                             <use xlink:href="svg/symbol-defs.svg#icon-child" />
                         </svg>
