@@ -93,9 +93,9 @@ function js(done) {
 			'../page/search/js/script.js',
 			'../page/thanksForContactingUs/js/script.js',
 			'../page/thanksForSubscribing/js/script.js',
-			'../page/js/general-tail.js',
-			'../page/js/moment.min.js',
-			'../sweetalert2.all.js'
+			'../shared/js/general-tail.js',
+			'../shared/js/moment.min.js',
+			'../shared/js/sweetalert2.all.js'
 		])
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest('../../public/js'))
