@@ -81,7 +81,7 @@ function video(done) {
 function js(done) {
 	gulp
 		.src([
-			'../shared/js/general.js',
+			'../shared/js/general-head.js',
 			'../page/about/js/script.js',
 			'../page/booking/js/script.js',
 			'../page/bookingCompleted/js/script.js',
@@ -93,6 +93,9 @@ function js(done) {
 			'../page/search/js/script.js',
 			'../page/thanksForContactingUs/js/script.js',
 			'../page/thanksForSubscribing/js/script.js',
+			'../page/js/general-tail.js',
+			'../page/js/moment.min.js',
+			'../sweetalert2.all.js'
 		])
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest('../../public/js'))
