@@ -124,8 +124,8 @@
         </div>
         <div>
             <h2>Reserve this room</h2>
-            <form action="booking.html" method="POST">
-                <div class="input_group_container">
+            <div class="input_group_container">
+                <form action="booking.html" method="POST">
                     <fieldset>
                         <label for="entry_date">Entry date</label>
                         <input type="date" id="entry_date" required />
@@ -140,41 +140,42 @@
                             <use xlink:href="svg/symbol-defs.svg#icon-calendar" />
                         </svg>
                     </fieldset>
-                </div>
-                <div class="input_group_container">
-                    <fieldset>
-                        <label for="numberAdults">Number of adults</label>
-                        <input id="numberAdults" type="number" name="numberAdults" value="2" required />
-                        <svg class="form_icon" aria-label="Number of adults">
-                            <use xlink:href="svg/symbol-defs.svg#icon-man" />
-                        </svg>
-                    </fieldset>
-                    <fieldset>
-                        <label for="numberMinors">Number of minors</label>
-                        <input id="numberMinors" type="number" name="numberMinors" value="0" required />
-                        <svg class="form_icon" aria-label="Number of minors">
-                            <use xlink:href="svg/symbol-defs.svg#icon-child"/>
-                        </svg>
-                    </fieldset>
-                </div>
+            </div>
+            <div class="input_group_container">
                 <fieldset>
-                    <button class="send_button">See availability</button>
+                    <label for="numberAdults">Number of adults</label>
+                    <input id="numberAdults" type="number" name="numberAdults" value="2" required />
+                    <svg class="form_icon" aria-label="Number of adults">
+                        <use xlink:href="svg/symbol-defs.svg#icon-man" />
+                    </svg>
                 </fieldset>
+                <fieldset>
+                    <label for="numberMinors">Number of minors</label>
+                    <input id="numberMinors" type="number" name="numberMinors" value="0" required />
+                    <svg class="form_icon" aria-label="Number of minors">
+                        <use xlink:href="svg/symbol-defs.svg#icon-child" />
+                    </svg>
+                </fieldset>
+            </div>
+            <fieldset>
+                <button class="send_button">See availability</button>
+            </fieldset>
+            </form>
         </div>
     </main>
 
     <footer>
         <div class="newsletter_form_container">
-            
+
             <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
-                    <h3>Subscribe to our Newsletter!</h3>
-                    <div class="newsletter_input_container">
-                        <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
-                        <svg class="form_icon" aria-label="Your Email">
-                            <use xlink:href="svg/symbol-defs.svg#icon-mail" />
-                        </svg>
-                        <button class="send_button">Subscribe!</button>
-                    </div>
+                <h3>Subscribe to our Newsletter!</h3>
+                <div class="newsletter_input_container">
+                    <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
+                    <svg class="form_icon" aria-label="Your Email">
+                        <use xlink:href="svg/symbol-defs.svg#icon-mail" />
+                    </svg>
+                    <button class="send_button">Subscribe!</button>
+                </div>
             </form>
         </div>
         <div class="footer_container">
