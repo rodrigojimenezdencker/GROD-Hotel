@@ -4,7 +4,8 @@ var
 	gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
-	uglifyCss = require('gulp-csso')
+	uglifyCss = require('gulp-csso'),
+	uglifyJs = require('gulp-uglify')
 	;
 
 function css(done) {
@@ -20,9 +21,11 @@ function css(done) {
 			'../page/hotel/css/style.css',
 			'../page/index/css/style.css',
 			'../page/personalDataUsage/css/style.css',
+			'../page/room/css/style.css',
 			'../page/search/css/style.css',
 			'../page/thanksForContactingUs/css/style.css',
 			'../page/thanksForSubscribing/css/style.css',
+			'../shared/css/sweetalert2.css'
 		])
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('../../public/css'))
@@ -90,6 +93,7 @@ function js(done) {
 			'../page/hotel/js/script.js',
 			'../page/index/js/script.js',
 			'../page/personalDataUsage/js/script.js',
+			'../page/room/js/script.js',
 			'../page/search/js/script.js',
 			'../page/thanksForContactingUs/js/script.js',
 			'../page/thanksForSubscribing/js/script.js',
