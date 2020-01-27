@@ -1,7 +1,5 @@
 'use strict';
 
-// import  "./better-dni.js";
-
 var window_onDomContentLoaded = function () {
 
     var setuppers = [];
