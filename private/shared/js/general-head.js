@@ -1,5 +1,7 @@
 'use strict';
 
+// import  "./better-dni.js";
+
 var window_onDomContentLoaded = function () {
 
     var setuppers = [];
@@ -219,7 +221,15 @@ var window_onDomContentLoaded = function () {
         //DNI
         if(widget.querySelector('[data-hook="dni"]') != null) {
             var dni = widget.querySelector('[data-hook="dni"]').value;
-            if(dni == "" || dni.length != 9 || validadorDni(dni)) {
+            // if(dni == "" || dni.length != 9 || validadorDni(dni)) {
+            //     Swal.fire({
+            //         icon: 'error',
+            //         title: "Something is not right...",
+            //         text: 'Incorrect DNI!'
+            //     });
+            //     return;
+            // }
+            if(!isValid(dni)) {
                 Swal.fire({
                     icon: 'error',
                     title: "Something is not right...",
