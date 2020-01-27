@@ -4,7 +4,8 @@ var
 	gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
-	uglifyCss = require('gulp-csso')
+	uglifyCss = require('gulp-csso'),
+	uglifyJs = require('gulp-uglify')
 	;
 
 function css(done) {
@@ -20,8 +21,11 @@ function css(done) {
 			'../page/hotel/css/style.css',
 			'../page/index/css/style.css',
 			'../page/personalDataUsage/css/style.css',
+			'../page/room/css/style.css',
 			'../page/search/css/style.css',
-			'../page/thanksForContactingUs/css/style.css'
+			'../page/thanksForContactingUs/css/style.css',
+			'../page/thanksForSubscribing/css/style.css',
+			'../shared/css/sweetalert2.css'
 		])
 		.pipe(concat('style.css'))
 		.pipe(gulp.dest('../../public/css'))
@@ -77,4 +81,34 @@ function video(done) {
 	done();
 }
 
-exports.default = gulp.parallel(css, font, img, svg, video);
+function js(done) {
+	gulp
+		.src([
+			'../shared/js/general-head.js',
+			'../page/about/js/script.js',
+			'../page/booking/js/script.js',
+			'../page/bookingCompleted/js/script.js',
+			'../page/contact/js/script.js',
+			'../page/cookieUsage/js/script.js',
+			'../page/hotel/js/script.js',
+			'../page/index/js/script.js',
+			'../page/personalDataUsage/js/script.js',
+			'../page/room/js/script.js',
+			'../page/search/js/script.js',
+			'../page/thanksForContactingUs/js/script.js',
+			'../page/thanksForSubscribing/js/script.js',
+			'../shared/js/general-tail.js',
+			'../shared/js/moment.min.js',
+			'../shared/js/sweetalert2.all.js'
+		])
+		.pipe(concat('script.js'))
+		.pipe(gulp.dest('../../public/js'))
+		.pipe(rename('script.min.js'))
+		.pipe(uglifyJs())
+		.pipe(gulp.dest('../../public/js'))
+		;
+
+	done();
+}
+
+exports.default = gulp.parallel(css, font, img, svg, video, js);

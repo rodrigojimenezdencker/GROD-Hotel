@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="page-index">
+<html lang="en" data-page="index" class="page-index">
 
 <head>
     <meta charset="UTF-8" />
@@ -30,21 +30,21 @@
         </nav>
         <img id="img_logo" src="img/logo-350px.png" alt="GROD Hotel" />
 
-        <video width="100%" autoplay loop muted>
+        <video width="100" autoplay loop muted>
             <source src="video/hotel.mp4" type="video/mp4">
         </video>
-        <form action="search.html" method="POST">
+        <form action="search.html" data-widget="index_form" method="POST">
             <div class="input_group_container">
                 <fieldset>
                     <label for="entry_date">Entry date</label>
-                    <input required type="date" id="entry_date" />
+                    <input type="date" data-hook="entry_date" id="entry_date" required />
                     <svg class="form_icon" aria-label="Entry Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="leaving_date">Leaving date</label>
-                    <input required type="date" id="leaving_date" />
+                    <input type="date" data-hook="leaving_date" id="leaving_date" required />
                     <svg class="form_icon" aria-label="Leaving Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
@@ -53,14 +53,16 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input required id="numberAdults" type="number" name="numberAdults" value="2" />
+                    <input id="numberAdults" type="number" data-hook="numberAdults" min="1" max="10" name="numberAdults"
+                        value="2" />
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input required id="numberMinors" type="number" name="numberMinors" value="0">
+                    <input id="numberMinors" type="number" data-hook="numberMinors" min="0" max="10" name="numberMinors"
+                        value="0">
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
@@ -69,8 +71,8 @@
             <fieldset>
                 <label for="city">City</label>
                 <div class="select">
-                    <select required id="city">
-                        <option selected disabled>Select a city</option>
+                    <select data-hook="city" id="city" required>
+                        <option value="" selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
                         <option value="longon">London</option>
@@ -163,7 +165,6 @@
                     <p><em>I really loved this website it found the hotel I needed in seconds, I've really enjoyed
                             it!</em></p>
                 </li>
-                <hr />
                 <li>
                     <div class="user_info">
                         <img src="img/pedro_sanchez.png" alt="User image" />
@@ -175,7 +176,35 @@
         </div>
     </main>
 
+    <a href="#head"><svg class="arrow_up" data-widget="scroll_to_top" aria-label="facebook">
+            <use xlink:href="svg/symbol-defs.svg#icon-navigate-up-arrow" />
+        </svg></a>
+
     <footer>
+        <div class="cookies_warning" data-widget="cookies_warning">
+            <p>
+                This site uses cookies to personalise content and adverts, to provide social media features and to
+                analyse traffic. <a href="cookie-usage.html">More info</a>.
+            </p>
+            <div>
+                <button data-hook="accept_cookie" class="send_button">Accept cookies</button>
+                <button data-hook="reject_cookie" class="send_button">Decline cookies</button>
+            </div>
+        </div>
+
+        <div class="newsletter_form_container">
+            <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
+                <h3>Subscribe to our Newsletter!</h3>
+                <div class="newsletter_input_container">
+                    <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
+                    <svg class="form_icon" aria-label="Your Email">
+                        <use xlink:href="svg/symbol-defs.svg#icon-mail" />
+                    </svg>
+                    <button class="send_button">Subscribe!</button>
+                </div>
+            </form>
+        </div>
+
         <div class="footer_container">
             <div>
                 <p>
@@ -203,24 +232,31 @@
                 <h3>Follow Us</h3>
                 <ul id="social_icon_list">
                     <li>
-                        <a href="#"><svg class="footer_icon" aria-label="facebook">
-                                <use xlink:href="svg/symbol-defs.svg#icon-facebook"></use>
-                            </svg></a>
+                        <a href="#">
+                            <svg class="footer_icon" aria-label="facebook">
+                                <use xlink:href="svg/symbol-defs.svg#icon-facebook" />
+                            </svg>
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><svg class="footer_icon" aria-label="twitter">
-                                <use xlink:href="svg/symbol-defs.svg#icon-twitter"></use>
-                            </svg></a>
+                        <a href="#">
+                            <svg class="footer_icon" aria-label="twitter">
+                                <use xlink:href="svg/symbol-defs.svg#icon-twitter" />
+                            </svg>
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><svg class="footer_icon" aria-label="instagram">
-                                <use xlink:href="svg/symbol-defs.svg#icon-instagram"></use>
-                            </svg></a>
+                        <a href="#">
+                            <svg class="footer_icon" aria-label="instagram">
+                                <use xlink:href="svg/symbol-defs.svg#icon-instagram" />
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
