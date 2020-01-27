@@ -91,8 +91,36 @@ var window_onDomContentLoaded = function () {
     }
 
     var validateForm = function (widget) {
+        //ENTRY DATE
+        if(widget.querySelector('[data-hook="entry_date"]') != null) {
         var entryDate = widget.querySelector('[data-hook="entry_date"]').value;
+        var momentEntryDate = moment(entryDate, "YYYY-MM-DD");
+        var momentToday = moment();
+        if(momentEntryDate.isBefore(momentToday) || momentEntryDate.diff(momentToday, 'months') >= 6 ||momentEntryDate.format() == 'Invalid date') {
+            Swal.fire({
+                icon: 'error',
+                title: "Something is not right...",
+                text: 'Incorrect entry date!'
+              });
+              return 'No';
+            }
+        }
+        //ENTRY DATE
+
+        //LEAVING DATE
+        if(widget.querySelector('[data-hook="leaving_date"]') != null) { 
         var leavingDate = widget.querySelector('[data-hook="leaving_date"]').value;
+        var momentLeavingDate = moment(leavingDate, "YYYY-MM-DD");
+        if(momentLeavingDate.isBefore(momentEntryDate) || momentLeavingDate.isSame(momentEntryDate) || momentLeavingDate.diff(momentEntryDate, 'days') == 1 || momentLeavingDate.diff(momentToday, 'months') >= 6 || momentLeavingDate.format() == 'Invalid date') {
+            Swal.fire({
+                icon: 'error',
+                title: "Something is not right...",
+                text: 'Incorrect leaving date!'
+              });
+              return 'No';
+            }
+        }
+        //LEAVING DATE
 
         //NUMBER OF ADULTS
         if(widget.querySelector('[data-hook="numberAdults"]') != null) {
