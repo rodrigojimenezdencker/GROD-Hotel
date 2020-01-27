@@ -177,6 +177,10 @@ footer {
   display: inline;
 }
 
+#social_icon_list li a {
+  text-decoration: none;
+}
+
 .footer_icon {
   border: 1px solid #fad860;
   border-radius: 0.7em;
