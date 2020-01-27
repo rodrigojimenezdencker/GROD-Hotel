@@ -49,14 +49,14 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="entry_date">Entry date</label>
-                    <input type="date" data-hook="entry_date" id="entry_date" />
+                    <input type="date" data-hook="entry_date" id="entry_date" required />
                     <svg class="form_icon" aria-label="Entry Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="leaving_date">Leaving date</label>
-                    <input type="date" data-hook="leaving_date" id="leaving_date" />
+                    <input type="date" data-hook="leaving_date" id="leaving_date" required />
                     <svg class="form_icon" aria-label="Leaving Date">
                         <use xlink:href="svg/symbol-defs.svg#icon-calendar"></use>
                     </svg>
@@ -65,14 +65,14 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input id="numberAdults" type="number" data-hook="numberAdults" name="numberAdults" value="2" />
+                    <input id="numberAdults" type="number" data-hook="numberAdults" min="1" max="10" name="numberAdults" value="2" />
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" data-hook="numberMinors" name="numberMinors" value="0">
+                    <input id="numberMinors" type="number" data-hook="numberMinors" min="0" max="10" name="numberMinors" value="0">
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
@@ -81,7 +81,7 @@
             <fieldset>
                 <label for="city">City</label>
                 <div class="select">
-                    <select data-hook="city" id="city">
+                    <select data-hook="city" id="city" required>
                         <option selected disabled>Select a city</option>
                         <option value="barcelona">Barcelona</option>
                         <option value="madrid">Madrid</option>
