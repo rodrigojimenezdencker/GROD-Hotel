@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="page-thanks-for-contacting-us">
+<html lang="en" data-page="thanks-for-subscribing" class="page-thanks-for-subscribing">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Thanks for contacting us | GROD Hotel</title>
+    <title>Thanks for subscribing | GROD Hotel</title>
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png" />
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -39,7 +39,34 @@
         </div>
     </main>
 
+    <a href="#head"><svg class="arrow_up" data-widget="scroll_to_top" aria-label="facebook">
+            <use xlink:href="svg/symbol-defs.svg#icon-navigate-up-arrow" />
+        </svg></a>
+
     <footer>
+        <div class="cookies_warning" data-widget="cookies_warning">
+            <p>
+                This site uses cookies to personalise content and adverts, to provide social media features and to
+                analyse traffic. <a href="cookie-usage.html">More info</a>.
+            </p>
+            <div>
+                <button data-hook="accept_cookie" class="send_button">Accept cookies</button>
+                <button data-hook="reject_cookie" class="send_button">Decline cookies</button>
+            </div>
+        </div>
+
+        <div class="newsletter_form_container">
+            <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
+                <h3>Subscribe to our Newsletter!</h3>
+                <div class="newsletter_input_container">
+                    <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
+                    <svg class="form_icon" aria-label="Your Email">
+                        <use xlink:href="svg/symbol-defs.svg#icon-mail" />
+                    </svg>
+                    <button class="send_button">Subscribe!</button>
+                </div>
+            </form>
+        </div>
         <div class="footer_container">
             <div>
                 <p>
@@ -91,6 +118,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
