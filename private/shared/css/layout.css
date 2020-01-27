@@ -248,7 +248,7 @@ body .newsletter_input_container input:hover::placeholder {
   color: #f8f8f8;
 }
 
-footer form .send_button {
+footer form .send_button, .cookies_warning button {
   display: inline;
   color: #f8f8f8;
 }
@@ -256,9 +256,54 @@ footer form .send_button {
 .arrow_up {
   position: fixed;
   bottom: 10px;
-  right: 10px;
-  width: 100px;
+  right: 2px;
   display: none;
+  fill: #c03949;
+  border: 1px solid #c03949;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 2;
+}
+
+.cookies_warning {
+  border-radius: 8px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 150px;
+  width: 90%;
+  background-color: #010116;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.95;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+  animation-duration: 1.3s;
+  font-family: "Sulphur Point";
+}
+
+.cookies_warning p a {
+  color: #f8f8f8;
+}
+
+.cookies_warning p a:hover {
+  color: #e6e6e6;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.95;
+	}
 }
 
 @media (max-width: 699px) {

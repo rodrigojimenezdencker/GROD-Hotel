@@ -65,14 +65,16 @@
             <div class="input_group_container">
                 <fieldset>
                     <label for="numberAdults">Number of adults</label>
-                    <input id="numberAdults" type="number" data-hook="numberAdults" min="1" max="10" name="numberAdults" value="2" />
+                    <input id="numberAdults" type="number" data-hook="numberAdults" min="1" max="10" name="numberAdults"
+                        value="2" />
                     <svg class="form_icon" aria-label="Number of adults">
                         <use xlink:href="svg/symbol-defs.svg#icon-man"></use>
                     </svg>
                 </fieldset>
                 <fieldset>
                     <label for="numberMinors">Number of minors</label>
-                    <input id="numberMinors" type="number" data-hook="numberMinors" min="0" max="10" name="numberMinors" value="0">
+                    <input id="numberMinors" type="number" data-hook="numberMinors" min="0" max="10" name="numberMinors"
+                        value="0">
                     <svg class="form_icon" aria-label="Number of minors">
                         <use xlink:href="svg/symbol-defs.svg#icon-child"></use>
                     </svg>
@@ -187,10 +189,22 @@
         </div>
     </main>
 
-    <a href="#head"><img class="arrow_up" src="/public/svg/navigate-up-arrow.svg" data-widget="scroll_to_top"
-            alt="Go back to the top of the page"></a>
+    
+
+    <a href="#head"><svg class="arrow_up" data-widget="scroll_to_top" aria-label="facebook">
+        <use xlink:href="svg/symbol-defs.svg#icon-navigate-up-arrow" />
+    </svg></a>
 
     <footer>
+        <div class="cookies_warning" data-widget="cookies_warning">
+            <p>
+                This site uses cookies to personalise content and adverts, to provide social media features and to analyse traffic. <a href="cookie-usage.html">More info</a>.
+            </p>
+            <div>
+                <button class="send_button">I accept all cookies</button>
+                <button class="send_button">I don't accept any cookies</button>
+            </div>
+        </div>
         <div class="newsletter_form_container">
 
             <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
