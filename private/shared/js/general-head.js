@@ -208,19 +208,71 @@ var window_onDomContentLoaded = function () {
 
         //CITY
         if(widget.querySelector('[data-hook="city"]') != null){
-        var city = widget.querySelector('[data-hook="city"]').value;
-        if(city.length == 0 || city.length > 20) {
-            Swal.fire({
-                icon: 'error',
-                title: "Something is not right...",
-                text: 'Incorrect city!'
-              });
-              return 'No';
+            var city = widget.querySelector('[data-hook="city"]').value;
+            if(city.length == 0 || city.length > 20) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Something is not right...",
+                    text: 'Incorrect city!'
+                });
+                return 'No';
             }
         }
         //CITY
+        
+        //DNI
+        if(widget.querySelector('[data-hook="dni"]') != null) {
+            var dni = widget.querySelector('[data-hook="dni"]').value;
+            if(dni == "" || dni.length != 9 || validadorDni(dni)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Something is not right...",
+                    text: 'Incorrect DNI!'
+                });
+                return 'No';
+            }
+        }
+        //DNI
+
+        //EMAIL
+        if(widget.querySelector('[data-hook="email"]') != null) {
+            var email = widget.querySelector('[data-hook="email"]').value;
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(email == "" || !re.test(String(email).toLowerCase())) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Something is not right...",
+                    text: 'Incorrect Email!'
+                });
+                return 'No';
+            }
+        }
+        //EMAIL
         widget.submit(); 
     }
+
+    function validadorDni(dni) {
+        var number;
+        var char;
+        var chars;
+        var regex;
+       
+        regex = /^\d{8}[a-zA-Z]$/;
+       
+        if(regex.test (dni) == true) {
+           number = dni.substr(0,dni.length-1);
+           char = dni.substr(dni.length-1,1);
+           number = number % 23;
+           chars='TRWAGMYFPDXBNJZSQVHLCKET';
+           chars=chars.substring(number,number+1);
+          if(chars==char.toUpperCase()) {
+             return false;
+           }
+        } else {
+           return true;
+         }
+      }
+      
 
     backToTopButton.addEventListener("click", backToTop);
 }
