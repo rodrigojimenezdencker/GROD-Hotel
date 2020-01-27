@@ -69,21 +69,31 @@
     </main>
 
     <a href="#head"><svg class="arrow_up" data-widget="scroll_to_top" aria-label="facebook">
-        <use xlink:href="svg/symbol-defs.svg#icon-navigate-up-arrow" />
-    </svg></a>
+            <use xlink:href="svg/symbol-defs.svg#icon-navigate-up-arrow" />
+        </svg></a>
 
     <footer>
+        <div class="cookies_warning" data-widget="cookies_warning">
+            <p>
+                This site uses cookies to personalise content and adverts, to provide social media features and to
+                analyse traffic. <a href="cookie-usage.html">More info</a>.
+            </p>
+            <div>
+                <button data-hook="accept_cookie" class="send_button">I accept all cookies</button>
+                <button data-hook="reject_cookie" class="send_button">I don't accept any cookies</button>
+            </div>
+        </div>
+
         <div class="newsletter_form_container">
-            
             <form data-widget="newsletter-form" action="thanks-for-subscribing.html" method="POST">
-                    <h3>Subscribe to our Newsletter!</h3>
-                    <div class="newsletter_input_container">
-                        <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
-                        <svg class="form_icon" aria-label="Your Email">
-                            <use xlink:href="svg/symbol-defs.svg#icon-mail" />
-                        </svg>
-                        <button class="send_button">Subscribe!</button>
-                    </div>
+                <h3>Subscribe to our Newsletter!</h3>
+                <div class="newsletter_input_container">
+                    <input placeholder="Your e-mail" id="email" type="email" maxlength="50" name="email" required />
+                    <svg class="form_icon" aria-label="Your Email">
+                        <use xlink:href="svg/symbol-defs.svg#icon-mail" />
+                    </svg>
+                    <button class="send_button">Subscribe!</button>
+                </div>
             </form>
         </div>
         <div class="footer_container">
