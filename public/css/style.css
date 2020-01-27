@@ -177,6 +177,10 @@ footer {
   display: inline;
 }
 
+#social_icon_list li a {
+  text-decoration: none;
+}
+
 .footer_icon {
   border: 1px solid #fad860;
   border-radius: 0.7em;
@@ -240,15 +244,12 @@ footer form {
   justify-content: space-between;
 }
 
-body .newsletter_input_container input {
-  width: 80%;
-}
-
 body .newsletter_input_container input:hover::placeholder {
   color: #f8f8f8;
 }
 
-footer form .send_button, .cookies_warning button {
+footer form .send_button,
+.cookies_warning button {
   display: inline;
   color: #f8f8f8;
 }
@@ -268,13 +269,13 @@ footer form .send_button, .cookies_warning button {
 }
 
 .cookies_warning {
+  box-sizing: border-box;
   border-radius: 8px;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
   height: 150px;
-  width: 90%;
   background-color: #010116;
   z-index: 10;
   display: flex;
@@ -282,9 +283,9 @@ footer form .send_button, .cookies_warning button {
   align-items: center;
   flex-direction: column;
   opacity: 0.95;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
   animation-duration: 1.3s;
   font-family: "Sulphur Point";
 }
@@ -298,12 +299,12 @@ footer form .send_button, .cookies_warning button {
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0.95;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.95;
+  }
 }
 
 @media (max-width: 699px) {
@@ -388,6 +389,24 @@ footer form .send_button, .cookies_warning button {
     text-align: center;
     width: 100%;
   }
+
+  .newsletter_input_container{
+    flex-direction: column;
+  }
+
+  body .newsletter_form_container input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .cookies_warning {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cookies_warning button {
+    padding: 10px;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -410,6 +429,14 @@ footer form .send_button, .cookies_warning button {
 
   .footer_container {
     justify-content: space-around;
+  }
+
+  body .newsletter_input_container input {
+    width: 80%;
+  }
+
+  .cookies_warning {
+    width: 90%;
   }
 }
 
