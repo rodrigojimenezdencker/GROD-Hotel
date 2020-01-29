@@ -373,6 +373,7 @@ footer form .send_button,
     height: 240px;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 9999;
   }
 
   .footer_container {
